@@ -3,137 +3,1239 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IETLS - Lớp Anh thầy Kết</title>
+<title>Nông Trại IELTS Speaking Part 2 & 3 - Lớp Anh thầy Kết</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
+
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Nunito:wght@400;600;700;800&display=swap');
+
+  :root {
+    --farm-green: #52b788;
+    --farm-dark-green: #2d6a4f;
+    --farm-yellow: #ffb703;
+    --farm-orange: #fb8500;
+    --farm-brown: #8b5e3c;
+    --farm-cream: #fefae0;
+  }
+
   body {
-    font-family: Arial, sans-serif;
-    background-color: #fff8f0;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    background-color: #f4f9f4;
+    background-image: radial-gradient(#d8f3dc 2px, transparent 2px);
+    background-size: 24px 24px;
+    color: #2b2d42;
   }
 
-  header {
-    background-color: #ffd6ba; /* pastel cam nhạt */
-    color: #7a4e3e;
-    padding: 40px 20px;
-    font-size: 36px;
-    font-weight: bold;
+  h1, h2, h3, .font-farm {
+    font-family: 'Fredoka', cursive;
   }
 
-  .button-container {
-    margin: 50px auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    max-width: 900px;
+  /* Sun animation */
+  @keyframes spin-slow {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  .animate-sun {
+    animation: spin-slow 20s linear infinite;
   }
 
-  .nav-button {
-    background-color: #a0e7e5; /* pastel xanh nhạt */
-    color: #3a3a3a;
-    border: none;
-    padding: 20px 25px;
-    font-size: 20px;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: transform 0.2s, background-color 0.3s;
-    text-decoration: none;
-    flex: 1 1 200px;
-    max-width: 220px;
+  /* Bounce Effect */
+  .hover-bounce:hover {
+    transform: translateY(-4px);
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
 
-  .nav-button:hover {
-    background-color: #ffb3ba; /* pastel hồng nhạt khi hover */
-    transform: translateY(-3px);
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #e9f5ec;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #74c69d;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #52b788;
   }
 
-  .social-section {
-    margin-top: 60px;
+  /* Flip Card Style */
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  .transform-style-3d {
+    transform-style: preserve-3d;
+  }
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+  .rotate-y-180 {
+    transform: rotateY(180deg);
   }
 
-  .social-section h2 {
-    font-size: 24px;
-    color: #7a4e3e;
-    margin-bottom: 20px;
+  .hidden-meaning {
+    filter: blur(5px);
+    user-select: none;
+    transition: filter 0.2s ease;
   }
-
-  .social-icons a {
-    display: inline-block;
-    margin: 0 15px;
-    font-size: 40px;
-    color: #a0e7e5; /* pastel xanh nhạt */
-    transition: color 0.3s, transform 0.2s;
-  }
-
-  .social-icons a:hover {
-    color: #ffb3ba; /* pastel hồng nhạt khi hover */
-    transform: translateY(-5px);
-  }
-
-  footer {
-    margin-top: 50px;
-    padding: 20px;
-    font-size: 16px;
-    color: #555;
-    background-color: #fff0e1;
-  }
-
-  @media (max-width: 600px) {
-    .nav-button {
-      flex: 1 1 100%;
-      max-width: 90%;
-      font-size: 18px;
-      padding: 15px 10px;
-    }
-
-    .social-icons a {
-      font-size: 35px;
-      margin: 0 10px;
-    }
+  .hidden-meaning:hover {
+    filter: blur(0px);
   }
 </style>
 </head>
-<body>
 
-<header>
-  IELTS - Lớp Anh thầy Kết
-</header>
+<body class="min-h-screen flex flex-col justify-between">
 
-<div class="button-container">
-  <a href="" class="nav-button">Khoá học IELTS</a>
-  <a href="https://ketng91.github.io/-ielts.lopanhthayket.tuvungreading/" class="nav-button">Từ vựng Reading</a>
-  <a href="" class="nav-button">IELTS Reading</a>
-  <a href="https://ketng91.github.io/ielts.lopanhthayket.tuvungtopic/" class="nav-button">Từ vựng Chủ đề</a>
-  <a href="https://ketng91.github.io/ielts.lopanhthayket-luyennoi/" class="nav-button">IELTS Speaking Part 1</a>
-  <a href="" class="nav-button">IELTS Speaking Part 2&3</a>
-  <a href="" class="nav-button">Từ vựng Tổng hợp</a>
-  <a href="" class="nav-button">IELTS Listening</a>
-  <a href="" class="nav-button">IELTS Writing Task 1</a>
-  <a href="https://ketng91.github.io/essaywriting/" class="nav-button">IELTS Writing Task 2</a>
-  <a href="https://ketng91.github.io/khoawriting/" class="nav-button">Luyện viết câu</a>
-  <a href="" class="nav-button">Kho tài liệu học</a>
-  <a href="" class="nav-button">Game từ vựng</a>
-  <a href="" class="nav-button">Nông trại táo</a>
-  <a href="https://ketng91.github.io/xumayman/" class="nav-button">Khoa báu xu vàng</a>
+  <!-- TOP FARM HEADER -->
+  <header class="bg-gradient-to-r from-green-600 via-emerald-600 to-green-700 text-white shadow-lg relative overflow-hidden">
+    <div class="absolute -right-6 -bottom-6 opacity-20 pointer-events-none">
+      <i class="fa-solid fa-wheat-awn text-9xl"></i>
+    </div>
+    <div class="absolute left-10 top-2 opacity-15 pointer-events-none">
+      <i class="fa-solid fa-cloud text-6xl"></i>
+    </div>
 
-</div>
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between gap-4 relative z-10">
+      <a href="https://ketng91.github.io/ielts.lopanhthayket/" target="_blank" class="flex items-center gap-3 bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full transition border border-white/20">
+        <i class="fa-solid fa-tractor text-yellow-300 text-2xl"></i>
+        <span class="font-bold text-lg tracking-wide font-farm">Lớp Anh Thầy Kết</span>
+      </a>
 
-<!-- ====== Phần MXH ====== -->
-<div class="social-section">
-  <h2>MXH: Lớp Anh thầy Kết</h2>
-  <div class="social-icons">
-    <a href="https://www.facebook.com/profile.php?id=100095128431844" target="_blank" title="Facebook"><i class="fab fa-facebook-square"></i></a>
-    <a href="https://www.youtube.com/@LopmonAnhthayKet" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
-    <a href="https://www.tiktok.com/@lopanhthayket" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
-  </div>
-</div>
+      <div class="text-center">
+        <h1 class="text-2xl md:text-3xl font-bold tracking-wider text-yellow-300 drop-shadow">
+          🌾 IELTS SPEAKING FARM 🚜
+        </h1>
+        <p class="text-xs md:text-sm text-green-100 opacity-90">Thu Hoạch Từ Vựng - Bứt Phá Reflection</p>
+      </div>
 
-<footer>
-  © 2026 Lớp Anh thầy Kết. All rights reserved.
-</footer>
+      <div class="hidden md:flex items-center gap-2 text-yellow-300">
+        <i class="fa-solid fa-sun text-3xl animate-sun"></i>
+      </div>
+    </div>
+  </header>
 
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-5xl mx-auto px-4 py-6 flex-1 w-full space-y-8">
+
+    <!-- TOPIC SELECTOR BAR -->
+    <section class="bg-white rounded-2xl p-4 md:p-6 shadow-md border-2 border-green-200 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="w-12 h-12 rounded-xl bg-amber-100 border-2 border-amber-300 flex items-center justify-center text-amber-600 text-xl shadow-sm">
+          <i class="fa-solid fa-seedling"></i>
+        </div>
+        <div>
+          <label for="topicSelect" class="block text-xs font-bold text-gray-500 uppercase tracking-wider">Chọn Chủ Đề Học Tập</label>
+          <span class="text-sm text-green-700 font-semibold">Chọn topic để bắt đầu thu hoạch kiến thức!</span>
+        </div>
+      </div>
+
+      <div class="w-full md:w-72">
+        <select id="topicSelect" onchange="changeTopic(this.value)" class="w-full px-4 py-3 rounded-xl border-2 border-green-300 bg-emerald-50 text-green-900 font-bold focus:outline-none focus:ring-2 focus:ring-green-500 transition cursor-pointer shadow-inner">
+          <!-- Options populated dynamically -->
+        </select>
+      </div>
+    </section>
+
+    <!-- SECTION 1: PRACTICE QUESTIONS WITH SAMPLES & VOCAB (ACCORDION TOGGLE) -->
+    <section class="space-y-6">
+      <div class="flex items-center justify-between border-b-2 border-green-200 pb-3">
+        <h2 class="text-xl md:text-2xl font-bold text-green-800 flex items-center gap-2 font-farm">
+          <i class="fa-solid fa-list-check text-green-600"></i>
+          Danh Sách Câu Hỏi & Bài Mẫu IELTS Speaking
+        </h2>
+        <span id="questionCountBadge" class="bg-green-100 text-green-800 text-xs font-bold px-3 py-1 rounded-full border border-green-300">
+          0 Câu Hỏi
+        </span>
+      </div>
+
+      <!-- Container for questions -->
+      <div id="questionsContainer" class="space-y-4">
+        <!-- Questions injected by JS -->
+      </div>
+    </section>
+
+    <!-- SECTION 2: FLASHCARD REVISION FROM ALL TOPIC VOCAB -->
+    <section class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-3xl p-6 md:p-8 shadow-md border-2 border-amber-200 space-y-6 relative overflow-hidden">
+      <div class="absolute -right-4 -top-4 opacity-10 text-amber-800 pointer-events-none">
+        <i class="fa-solid fa-cow text-9xl"></i>
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-amber-200 pb-4">
+        <div>
+          <h2 class="text-xl md:text-2xl font-bold text-amber-900 flex items-center gap-2 font-farm">
+            <i class="fa-solid fa-layer-group text-amber-600"></i>
+            Ôn Tập Flashcard Từ Vựng Nông Trại
+          </h2>
+          <p class="text-xs md:text-sm text-amber-700">Tổng hợp toàn bộ từ vựng hay từ các câu hỏi ở trên</p>
+        </div>
+
+        <!-- Mode Selector Switcher -->
+        <div class="bg-white p-1 rounded-xl border border-amber-300 flex items-center shadow-sm">
+          <button id="modeEnVnBtn" onclick="setFlashcardMode('EN-VN')" class="px-3 py-1.5 rounded-lg text-xs font-bold transition bg-amber-500 text-white shadow-sm">
+            Anh - Việt
+          </button>
+          <button id="modeVnEnBtn" onclick="setFlashcardMode('VN-EN')" class="px-3 py-1.5 rounded-lg text-xs font-bold transition text-gray-600 hover:bg-amber-100">
+            Việt - Anh
+          </button>
+        </div>
+      </div>
+
+      <!-- Flashcard Display Box -->
+      <div class="flex flex-col items-center justify-center space-y-4 py-4">
+        <div id="flashcard" onclick="flipFlashcard()" class="w-full max-w-md h-56 perspective-1000 cursor-pointer">
+          <div id="flashcardInner" class="relative w-full h-full duration-500 transform-style-3d shadow-lg rounded-2xl border-2 border-amber-300 bg-white">
+            <!-- Front Face -->
+            <div class="absolute w-full h-full backface-hidden flex flex-col items-center justify-center p-6 text-center bg-white rounded-2xl">
+              <span class="text-xs font-bold text-amber-500 uppercase tracking-widest mb-2" id="fcFrontLabel">Mặt Trước</span>
+              <div id="fcFrontText" class="text-2xl md:text-3xl font-bold text-gray-800 mb-2">Đang tải...</div>
+              <p class="text-xs text-gray-400 mt-4"><i class="fa-solid fa-rotate text-amber-400 mr-1"></i> Nhấp vào thẻ để lật</p>
+            </div>
+
+            <!-- Back Face -->
+            <div class="absolute w-full h-full backface-hidden rotate-y-180 flex flex-col items-center justify-center p-6 text-center bg-amber-500 text-white rounded-2xl">
+              <span class="text-xs font-bold text-amber-100 uppercase tracking-widest mb-2" id="fcBackLabel">Đáp Án</span>
+              <div id="fcBackText" class="text-2xl md:text-3xl font-bold mb-2">...</div>
+              <button onclick="event.stopPropagation(); speakText(document.getElementById('fcAudioText').value)" class="mt-2 bg-white/20 hover:bg-white/30 px-3 py-1 rounded-full text-xs flex items-center gap-1">
+                <i class="fa-solid fa-volume-high"></i> Nghe phát âm
+              </button>
+              <input type="hidden" id="fcAudioText" value="" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Flashcard Action Buttons -->
+        <div class="flex flex-wrap items-center justify-center gap-3 pt-2">
+          <button onclick="knowWord()" class="px-5 py-2.5 bg-emerald-500 hover:bg-emerald-600 text-white font-bold rounded-xl shadow-md transition flex items-center gap-2 hover-bounce">
+            <i class="fa-solid fa-circle-check"></i> Đã biết
+          </button>
+          <button onclick="dontKnowWord()" class="px-5 py-2.5 bg-rose-500 hover:bg-rose-600 text-white font-bold rounded-xl shadow-md transition flex items-center gap-2 hover-bounce">
+            <i class="fa-solid fa-circle-xmark"></i> Chưa biết
+          </button>
+          <button onclick="nextFlashcard()" class="px-5 py-2.5 bg-amber-500 hover:bg-amber-600 text-white font-bold rounded-xl shadow-md transition flex items-center gap-2 hover-bounce">
+            <i class="fa-solid fa-forward"></i> Thẻ tiếp theo
+          </button>
+        </div>
+
+        <div class="text-xs text-amber-800 font-semibold" id="fcProgress">
+          Tiến độ: 0 / 0 từ
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: SPEAKING REFLECTION PRACTICE -->
+    <section class="bg-gradient-to-br from-teal-50 to-emerald-50 rounded-3xl p-6 md:p-8 shadow-md border-2 border-teal-200 space-y-6 relative overflow-hidden">
+      <div class="border-b border-teal-200 pb-4">
+        <h2 class="text-xl md:text-2xl font-bold text-teal-900 flex items-center gap-2 font-farm">
+          <i class="fa-solid fa-bolt text-teal-600"></i>
+          Thực Hành Phản Xạ Nói Câu Tiếng Anh
+        </h2>
+        <p class="text-xs md:text-sm text-teal-700">Hệ thống trích ngẫu nhiên câu bản dịch để bạn luyện phản xạ dịch nói sang tiếng Anh</p>
+      </div>
+
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-teal-100 flex flex-col items-center text-center space-y-4">
+        <div class="w-full">
+          <span class="text-xs font-bold text-teal-500 uppercase tracking-widest">Câu Bản Dịch Tiếng Việt</span>
+          <div id="vietSentence" class="text-lg md:text-xl font-bold text-gray-800 mt-2 min-h-[50px] flex items-center justify-center">
+            Bấm "Tiếp theo" để lấy câu hỏi phản xạ...
+          </div>
+        </div>
+
+        <!-- Answer display box -->
+        <div id="engAnswerContainer" class="w-full bg-teal-50 border border-teal-200 rounded-xl p-4 hidden">
+          <span class="text-xs font-bold text-teal-700 uppercase tracking-widest block mb-1">Đáp Án Mẫu Trong Bài Speaking:</span>
+          <div id="engAnswer" class="text-base md:text-lg font-bold text-teal-900"></div>
+          <button onclick="speakText(document.getElementById('engAnswer').innerText)" class="mt-2 text-xs text-teal-700 hover:text-teal-900 font-semibold inline-flex items-center gap-1">
+            <i class="fa-solid fa-volume-high"></i> Nghe phát âm
+          </button>
+        </div>
+
+        <!-- Controls -->
+        <div class="flex flex-wrap items-center justify-center gap-3 pt-2">
+          <button onclick="showSpeakingAnswer()" class="px-6 py-2.5 bg-teal-600 hover:bg-teal-700 text-white font-bold rounded-xl shadow transition hover-bounce flex items-center gap-2">
+            <i class="fa-solid fa-eye"></i> Hiện Đáp Án
+          </button>
+          <button onclick="nextSpeakingSentence()" class="px-6 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl shadow transition hover-bounce flex items-center gap-2">
+            <i class="fa-solid fa-arrow-right"></i> Câu Tiếp Theo
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-emerald-800 text-white text-center py-6 mt-12 border-t-4 border-yellow-400">
+    <div class="max-w-4xl mx-auto px-4 space-y-2">
+      <p class="font-farm text-lg text-yellow-300">🌾 Lớp Anh Thầy Kết - Học, Học Là Phải Thực Hành! 🚜</p>
+      <p class="text-xs text-emerald-200">Chúc các bạn gặt hái được nhiều band điểm cao trong kỳ thi IELTS Speaking!</p>
+    </div>
+  </footer>
+
+<script>
+/*************************************************************
+ * TOPIC LIST DEFINITION
+ *************************************************************/
+const topics = [
+  { id: 1, name: "A way/change that helps you save a lot of time & Time Management" },
+  { id: 2, name: "Describe an occasion that you lost something in public" },
+  { id: 3, name: "Describe a person you only met once recently and want to know more about" },
+  { id: 4, name: "Describe a course that impressed you a lot" },
+  { id: 5, name: "Describe a gift you would like to buy for your friend" },
+  { id: 6, name: "Describe a book you read that made you happy" },
+  { id: 7, name: "Describe a person whose health and fitness you have helped to improve" },
+  { id: 8, name: "Describe somewhere near a natural place that you have been to" },
+  { id: 9, name: "Describe your least favourite movie" },
+  { id: 10, name: "Describe a party for a special event that impressed you a lot" },
+  { id: 11, name: "Describe a public building you enjoy visiting (e.g. a library, a shopping mall, etc.)" },
+  { id: 12, name: "Describe a person who taught you a new skill" },
+  { id: 13, name: "Describe a person who learns history and loves history" },
+  { id: 14, name: "Describe an enjoyable evening you had with your friends" },
+  { id: 15, name: "Describe a person who is good at making things by hand" },
+  { id: 16, name: "Describe a time when someone talked about something you were not interested in but you kept listening" },
+  { id: 17, name: "Describe a person you know who really likes taking photos" },
+  { id: 18, name: "Describe a new skill you learned when you were a child" },
+  { id: 19, name: "Describe a time when you saved money to buy something special" },
+  { id: 20, name: "Describe a natural place in your city that you enjoy visiting" },
+
+];
+
+/*************************************************************
+ * IELTS SPEAKING DATA (BAND 7.0 - 9.0 PEECO STRUCTURE)
+ *************************************************************/
+const topicQuestions = {
+// 1: A way/change that helps you save a lot of time & Time Management (Part 3)
+  1: [
+    {
+      q: "Describe a way/change that helps you save a lot of time",
+      sample: "Well, today I'm gonna talk about a major lifestyle change I made recently, which is adopting a <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">digital time-blocking and task-batching routine</mark> for my daily work as an educator. To give you some basic information, instead of reacting to emails and messages randomly throughout the day, I now group similar tasks into <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">dedicated time blocks</mark> using calendar apps. \n\nI still remember the time—about six months ago—when I was completely overwhelmed by my <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">hectic teaching schedule</mark> and endless curriculum preparation. I constantly jumped from one task to another without finishing anything properly, which led to severe <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">cognitive fatigue</mark>. Then, I decided to overhaul my schedule by batching lesson-planning tasks into single morning slots. \n\nAt first, implementing this change was quite challenging because breaking old habits of constant multitasking required immense <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">self-discipline</mark>. I often felt frustrated when unexpected interruptions threatened to <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">disrupt my workflow</mark>. However, after pushing through the initial adjustment period, I felt an incredible <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">sense of relief and liberated productivity</mark>. Comparing this to my chaotic past, I now finish my professional tasks much earlier and have ample energy left for my family. \n\nLooking to the future, if I hadn't made this adjustment, I would probably still be struggling with <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">chronic time scarcity</mark> and burnout. Well, I guess that's all about this time-saving change.",
+      trans: "Vâng, hôm nay tôi sẽ nói về một thay đổi lớn trong lối sống mà tôi đã thực hiện gần đây, đó là áp dụng thói quen phân chia thời gian kỹ thuật số (time-blocking) và gom nhóm công việc (task-batching) cho công việc hàng ngày của tôi với tư cách là một nhà giáo. Cung cấp một số thông tin cơ bản, thay vì phản hồi email và tin nhắn ngẫu nhiên trong suốt cả ngày, giờ đây tôi nhóm các nhiệm vụ tương tự vào các khung thời gian chuyên biệt bằng các ứng dụng lịch.\n\nTôi vẫn nhớ thời điểm khoảng sáu tháng trước, khi tôi hoàn toàn bị choáng ngợp bởi lịch dạy bận rộn và việc chuẩn bị giáo án không có điểm dừng. Tôi liên tục nhảy từ việc này sang việc khác mà không hoàn thành việc gì ra hồn, dẫn đến mệt mỏi nhận thức nặng nề. Sau đó, tôi quyết định đại tu lịch trình của mình bằng cách gom các nhiệm vụ soạn bài vào các khung buổi sáng.\n\nLúc đầu, việc thực hiện thay đổi này khá thử thách vì phá vỡ thói quen làm nhiều việc cùng lúc đòi hỏi kỷ luật tự giác cao độ. Tôi thường cảm thấy bực bội khi những ngắt quãng bất ngờ đe dọa làm gián đoạn luồng công việc. Tuy nhiên, sau khi vượt qua giai đoạn điều chỉnh ban đầu, tôi cảm thấy nhẹ nhõm và năng suất làm việc được giải phóng tuyệt vời. So với quá khứ hỗn độn, giờ đây tôi hoàn thành công việc chuyên môn sớm hơn nhiều và còn dư dả năng lượng cho gia đình.\n\nNhìn về tương lai, nếu tôi không thực hiện điều chỉnh này, có lẽ tôi vẫn đang vật lộn với tình trạng thiếu thời gian trầm trọng và kiệt sức. Chà, tôi đoán đó là tất cả về thay đổi tiết kiệm thời gian này.",
+      vocab: [
+        { en: "digital time-blocking and task-batching routine", ipa: "/ˈdɪdʒ.ə.təl taɪm ˈblɑːk.ɪŋ ænd tæsk ˈbætʃ.ɪŋ ruːˈtiːn/", vn: "thói quen phân bổ thời gian và gom nhóm tác vụ kỹ thuật số" },
+        { en: "dedicated time blocks", ipa: "/ˈded.ə.keɪ.tɪd taɪm blɑːks/", vn: "các khung thời gian chuyên biệt" },
+        { en: "hectic teaching schedule", ipa: "/ˈhek.tɪk ˈtiː.tʃɪŋ ˈskedʒ.uːl/", vn: "lịch trình giảng dạy bận rộn" },
+        { en: "cognitive fatigue", ipa: "/ˈkɑːɡ.nə.t̬ɪv fəˈtiːɡ/", vn: "sự mệt mỏi / kiệt quệ tinh thần" },
+        { en: "self-discipline", ipa: "/ˌself ˈdɪs.ə.plɪn/", vn: "tính kỷ luật tự giác" },
+        { en: "disrupt my workflow", ipa: "/dɪsˈrʌpt maɪ ˈwɝːk.floʊ/", vn: "làm gián đoạn luồng công việc" },
+        { en: "sense of relief and liberated productivity", ipa: "/sens əv rɪˈliːf ænd ˈlɪb.ə.reɪ.t̬ɪd ˌprɑː.dʌkˈtɪv.ə.ti/", vn: "cảm giác nhẹ nhõm và năng suất được giải phóng" },
+        { en: "chronic time scarcity", ipa: "/ˈkrɑː.nɪk taɪm ˈsker.sə.ti/", vn: "tình trạng thiếu thốn thời gian trầm trọng" }
+      ]
+    },
+    {
+      q: "Is it necessary for children to learn time management?",
+      sample: "Well, the necessity of teaching children time management is quite undeniable. Some critics might argue that kids should be allowed to enjoy a carefree childhood without rigid schedules. But at the same time, it's unwise to overlook this life skill because early <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">habit formation</mark> lays the groundwork for future success. In modern Vietnamese society, where academic pressures start early, children who grasp the concept of scheduling can balance their studies and recreation smoothly, avoiding <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">procrastination and chronic stress</mark>. So, I guess cultivating this skill early on is <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">instrumental in building self-reliance</mark>.",
+      trans: "Chà, sự cần thiết phải dạy trẻ quản lý thời gian là không thể chối cãi. Một số nhà phê bình có thể lập luận rằng trẻ em nên được phép tận hưởng tuổi thơ vô tư mà không cần lịch trình cứng nhắc. Nhưng đồng thời, thật không khôn ngoan nếu bỏ qua kỹ năng sống này vì việc hình thành thói quen sớm đặt nền móng cho thành công trong tương lai. Trong xã hội hiện đại Việt Nam, nơi áp lực học tập bắt đầu từ sớm, những trẻ em nắm bắt được khái niệm lên lịch có thể cân bằng việc học và giải trí một cách suôn sẻ, tránh được sự trì hoãn và căng thẳng mãn tính. Vì vậy, tôi đoán việc vun đắp kỹ năng này từ sớm đóng vai trò quan trọng trong việc xây dựng tính tự lập.",
+      vocab: [
+        { en: "habit formation", ipa: "/ˈhæb.ɪt fɔːrˈmêɪ.ʃən/", vn: "sự hình thành thói quen" },
+        { en: "procrastination and chronic stress", ipa: "/prəˌkræs.təˈneɪ.ʃən ænd ˈkrɑː.nɪk stres/", vn: "sự trì hoãn và căng thẳng mãn tính" },
+        { en: "instrumental in building self-reliance", ipa: "/ˌɪn.strəˈmen.təl ɪn ˈbɪl.dɪŋ ˌself rɪˈlaɪ.əns/", vn: "góp phần quan trọng trong việc xây dựng tính tự lập" }
+      ]
+    },
+    {
+      q: "What can schools do to help students learn time management?",
+      sample: "Educational institutions play a pivotal role in shaping students' organizational habits. Schools can integrate practical workshops on <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">prioritization techniques</mark> and goal-setting directly into their extracurricular programs. Moreover, teachers can design project-based assignments with <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">strict milestone deadlines</mark>, forcing students to break down large tasks into manageable steps rather than cramming at the last minute. By doing so, educational environments act as a <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">practical training ground</mark> for real-world professional competency.",
+      trans: "Các cơ sở giáo dục đóng vai trò nòng cốt trong việc hình thành thói quen tổ chức của học sinh. Các trường học có thể tích hợp các buổi hội thảo thực tế về kỹ thuật ưu tiên và thiết lập mục tiêu trực tiếp vào các chương trình ngoại khóa của họ. Hơn nữa, giáo viên có thể thiết kế các bài tập dựa trên dự án với thời hạn mốc nghiêm ngặt, buộc học sinh phải chia nhỏ các nhiệm vụ lớn thành các bước dễ quản lý hơn là nhồi nhét vào phút cuối. Bằng cách đó, môi trường giáo dục đóng vai trò là một sân tập thực tế cho năng lực chuyên môn trong thế giới thực.",
+      vocab: [
+        { en: "prioritization techniques", ipa: "/praɪˌɔːr.ə.təˈzeɪ.ʃən tekˈniːks/", vn: "các kỹ thuật sắp xếp ưu tiên" },
+        { en: "strict milestone deadlines", ipa: "/strɪkt ˈmaɪl.stoʊn ˈded.laɪnz/", vn: "mốc thời hạn nghiêm ngặt" },
+        { en: "practical training ground", ipa: "/ˈpræk.tɪ.kəl ˈtreɪ.nɪŋ ɡraʊnd/", vn: "sân tập thực tế" }
+      ]
+    },
+    {
+      q: "What can people do to save time?",
+      sample: "To optimize daily productivity, individuals can adopt several <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">practical strategies</mark>. First off, minimizing digital distractions—such as turning off non-essential smartphone notifications—can dramatically reduce <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">attentional fragmentation</mark>. Additionally, people can <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">streamline routine errands</mark>, like batch-cooking meals for the entire week or utilizing online grocery delivery services instead of navigating congested supermarkets. These small adjustments accumulate and <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">free up massive amounts of discretionary time</mark>.",
+      trans: "Để tối ưu hóa năng suất hàng ngày, các cá nhân có thể áp dụng một số chiến lược thực tế. Trước hết, việc giảm thiểu sự xao lãng từ thiết bị số — chẳng hạn như tắt các thông báo điện thoại thông minh không cần thiết — có thể làm giảm đáng kể tình trạng phân tán sự chú ý. Ngoài ra, mọi người có thể hợp lý hóa các việc vặt thường ngày, như nấu ăn theo mẻ cho cả tuần hoặc sử dụng dịch vụ giao hàng tạp hóa trực tuyến thay vì di chuyển qua các siêu thị đông đúc. Những điều chỉnh nhỏ này tích lũy lại và giải phóng lượng lớn thời gian tự do định đoạt.",
+      vocab: [
+        { en: "attentional fragmentation", ipa: "/əˈten.ʃən.əl ˌfræɡ.menˈtêɪ.ʃən/", vn: "sự phân mảnh sự chú ý" },
+        { en: "streamline routine errands", ipa: "/ˈstriːm.laɪn ruːˈtiːn ˈer.əndz/", vn: "hợp lý hóa các việc vặt thường ngày" },
+        { en: "free up massive amounts of discretionary time", ipa: "/friː ʌp ˈmæs.ɪv əˈmaʊnts əv dɪˈskret.ə.ner.i taɪm/", vn: "giải phóng lượng lớn thời gian tự do định đoạt" }
+      ]
+    },
+    {
+      q: "Does technology help people save time? How and why?",
+      sample: "Undoubtedly, technological advancements have served as a <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">double-edged sword</mark>, but they predominantly aid in time-saving. Automation tools, artificial intelligence assistants, and project management apps allow us to <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">expedite repetitive administrative chores</mark>. For instance, sorting data or drafting routine emails can now be done in seconds. However, while tech eliminates physical friction, it can sometimes <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">induce cognitive overload</mark> if people become overly reliant on constant connectivity. Therefore, mindful usage is key to <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">reaping its true efficiency benefits</mark>.",
+      trans: "Không còn nghi ngờ gì nữa, những tiến bộ công nghệ đã đóng vai trò là con dao hai lưỡi, nhưng chúng chủ yếu hỗ trợ tiết kiệm thời gian. Các công cụ tự động hóa, trợ lý trí tuệ nhân tạo và ứng dụng quản lý dự án cho phép chúng ta xúc tiến các công việc hành chính lặp đi lặp lại nhanh chóng. Ví dụ, việc sắp xếp dữ liệu hoặc soạn thảo email thông thường giờ đây có thể được thực hiện trong vài giây. Tuy nhiên, mặc dù công nghệ loại bỏ ma sát vật lý, đôi khi nó có thể gây ra quá tải nhận thức nếu mọi người quá phụ thuộc vào kết nối liên tục. Do đó, việc sử dụng có ý thức là chìa khóa để gặt hái những lợi ích hiệu quả thực sự của nó.",
+      vocab: [
+        { en: "double-edged sword", ipa: "/ˈdʌb.əl edʒd sɔːrd/", vn: "con dao hai lưỡi" },
+        { en: "expedite repetitive administrative chores", ipa: "/ˈek.spə.daɪt rɪˈpet.ə.tɪv ədˈmɪn.ə.strə.tɪv tʃɔːrz/", vn: "xúc tiến các công việc hành chính lặp đi lặp lại" },
+        { en: "induce cognitive overload", ipa: "/ɪnˈduːs ˈkɑːɡ.nə.t̬ɪv ˈoʊ.vɚ.loʊd/", vn: "gây ra quá tải nhận thức" },
+        { en: "reaping its true efficiency benefits", ipa: "/ˈriːp.ɪŋ ɪts truː ɪˈfɪʃ.ən.si ˈben.ə.fɪts/", vn: "gặt hái những lợi ích hiệu quả thực sự" }
+      ]
+    },
+    {
+      q: "Do you think parents should be responsible for teaching children to save time?",
+      sample: "Yes, absolutely. Parents serve as the primary role models during a child's formative years. If adults practice poor time management or exhibit chronic tardiness, children will inevitably <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">internalize those counterproductive behaviors</mark>. By establishing clear household routines—such as fixed bedtimes or structured study hours—parents provide an <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">experiential framework</mark> that helps youngsters understand the value of punctuality and efficiency. It's an essential part of <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">parental guidance</mark>.",
+      trans: "Vâng, chắc chắn rồi. Cha mẹ đóng vai trò là hình mẫu chính trong những năm tháng hình thành nhân cách của trẻ. Nếu người lớn thực hành quản lý thời gian kém hoặc thể hiện tình trạng đi muộn mãn tính, trẻ em chắc chắn sẽ nội tâm hóa những hành vi phản tác dụng đó. Bằng cách thiết lập các thói quen rõ ràng trong gia đình — chẳng hạn như giờ đi ngủ cố định hoặc giờ học có cấu trúc — cha mẹ cung cấp một khung trải nghiệm giúp giới trẻ hiểu được giá trị của sự đúng giờ và hiệu quả. Đó là một phần thiết yếu của việc định hướng từ cha mẹ.",
+      vocab: [
+        { en: "internalize those counterproductive behaviors", ipa: "/ɪnˈtɝː.nəl.aɪz ðoʊz ˈkaʊn.t̬ɚ.prəˈdʌk.tɪv bɪˈheɪv.jɚz/", vn: "nội tâm hóa những hành vi phản tác dụng đó" },
+        { en: "experiential framework", ipa: "/ɪkˌspɪr.iˈen.ʃəl ˈfreɪm.wɝːk/", vn: "khung trải nghiệm thực tế" },
+        { en: "parental guidance", ipa: "/pəˈren.təl ˈɡaɪ.dəns/", vn: "sự hướng dẫn/giáo dục từ cha mẹ" }
+      ]
+    },
+    {
+      q: "Do people who can manage time well become successful more easily?",
+      sample: "From a practical standpoint, strong time management skills are often strongly correlated with career advancement. Individuals who excel at organizing their schedules can <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">execute high-priority tasks</mark> efficiently and maintain a calm composure under pressure. This reliability naturally catches the eye of employers and opens doors to <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">lucrative professional opportunities</mark>. However, success is multifaceted and also depends on factors like emotional intelligence and adaptability, meaning time management is a <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">vital catalyst rather than a sole guarantee</mark>.",
+      trans: "Từ quan điểm thực tế, các kỹ năng quản lý thời gian tốt thường có mối tương quan mạnh mẽ với sự thăng tiến trong sự nghiệp. Những cá nhân xuất sắc trong việc sắp xếp lịch trình có thể thực hiện các nhiệm vụ ưu tiên cao một cách hiệu quả và giữ được sự bình tĩnh dưới áp lực. Sự đáng tin cậy này tự nhiên lọt vào mắt xanh của nhà tuyển dụng và mở ra cánh cửa đến với các cơ hội nghề nghiệp béo bở. Tuy nhiên, thành công có nhiều mặt và cũng phụ thuộc vào các yếu tố như trí tuệ cảm xúc và khả năng thích ứng, có nghĩa là quản lý thời gian là một chất xúc tác quan trọng chứ không phải là sự đảm bảo duy nhất.",
+      vocab: [
+        { en: "execute high-priority tasks", ipa: "/ˈek.sə.kyuːt haɪ praɪˈɔːr.ə.t̬i tæsks/", vn: "thực hiện các nhiệm vụ ưu tiên hàng đầu" },
+        { en: "lucrative professional opportunities", ipa: "/ˈluː.krə.tɪv prəˈfeʃ.ən.əl ˌɑː.pɚˈtuː.nə.tiz/", vn: "các cơ hội nghề nghiệp sinh lời / béo bở" },
+        { en: "vital catalyst rather than a sole guarantee", ipa: "/ˈvaɪ.təl ˈkæt.əl.ɪst ˈræð.ɚ ðæn ə soʊl ˌɡer.ənˈtiː/", vn: "chất xúc tác quan trọng chứ không phải là sự đảm bảo duy nhất" }
+      ]
+    }
+  ],
+
+
+
+// 2: Describe an occasion that you lost something in public & Part 3
+  2: [
+    {
+      q: "Describe an occasion that you lost something in public",
+      sample: "Well, today I'm gonna talk about a rather stressful incident I experienced a few months ago when I <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">misplaced my leather wallet</mark> in a <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">bustling shopping mall</mark> here in Da Nang. To give you some basic information, it contained not only my identification cards and cash but also some sentimental family photos. \n\nI still remember the time—it was during a weekend evening when the shopping center was packed with shoppers. I had just finished buying some books and pulled out my wallet to pay, and I must have <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">absentmindedly left it</mark> on a bench near the bookstore entrance. \n\nAbout ten minutes later, when I reached the parking lot, I suddenly realized it was missing. Panic immediately set in, and I <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">retraced my steps frantically</mark>, asking security guards and checking the customer service desk to report the loss. \n\nAt first, I felt an <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">overwhelming sense of anxiety</mark> and frustration, half-believing I would never see it again. However, to my absolute astonishment, a <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">kind-hearted cleaner</mark> had found it and handed it in to the mall management intact. Looking to the future, if I hadn't been so careless, I wouldn't have put myself through that <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">emotional roller coaster</mark>, and from then on, I've always been <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">extra vigilant</mark> with my personal belongings. Well, I guess that's all about this unforgettable experience.",
+      trans: "Vâng, hôm nay tôi sẽ nói về một sự cố khá căng thẳng mà tôi đã trải qua vài tháng trước khi tôi vô tình để quên chiếc ví da của mình trong một trung tâm mua sắm sầm uất ở Đà Nẵng. Cung cấp một số thông tin cơ bản, nó chứa không chỉ thẻ tùy thân và tiền mặt mà còn có một số bức ảnh gia đình mang tính kỷ niệm.\n\nTôi vẫn nhớ thời điểm đó — đó là vào một buổi tối cuối tuần khi trung tâm thương mại đông nghẹt người mua sắm. Tôi vừa mua xong một vài cuốn sách và lấy ví ra trả tiền, và chắc là tôi đãng trí để quên nó trên một chiếc ghế băng gần lối vào hiệu sách.\n\nKhoảng mười phút sau, khi ra đến bãi giữ xe, tôi chợt nhận ra nó đã biến mất. Sự hoảng loạn lập tức ập đến, và tôi cuống cuồng đi ngược lại các bước chân của mình, nhờ bảo vệ hỗ trợ và đến quầy dịch vụ khách hàng để báo mất.\n\nLúc đầu, tôi cảm thấy vô cùng lo lắng và thất vọng, nửa tin rằng mình sẽ không bao giờ tìm lại được nó nữa. Tuy nhiên, điều khiến tôi kinh ngạc tuyệt đối là một nhân viên vệ sinh tốt bụng đã nhặt được và giao nộp nó cho ban quản lý trung tâm thương mại còn nguyên vẹn. Nhìn về tương lai, nếu tôi không bất cẩn như vậy, tôi đã không tự bắt mình phải trải qua chuyến tàu lượn cảm xúc đó, và kể từ đó, tôi luôn cảnh giác hơn với đồ đạc cá nhân của mình. Chà, tôi đoán đó là tất cả về trải nghiệm khó quên này.",
+      vocab: [
+        { en: "misplaced my leather wallet", ipa: "/mɪsˈpleɪst maɪ ˈleð.ɚ ˈwɑː.lɪt/", vn: "để quên / làm mất ví da" },
+        { en: "bustling shopping mall", ipa: "/ˈbʌs.əl.ɪŋ ˈʃɑː.pɪŋ mɑːl/", vn: "trung tâm mua sắm sầm uất" },
+        { en: "absentmindedly left it", ipa: "/ˌæb.səntˈmaɪn.dɪd.li left ɪt/", vn: "vô tình / đãng trí để quên nó" },
+        { en: "retraced my steps frantically", ipa: "/riːˈtreɪst maɪ steps ˈfræn.tɪ.kəl.i/", vn: "cuống cuồng tìm lại đường đi cũ" },
+        { en: "overwhelming sense of anxiety", ipa: "/ˌoʊ.vɚˈwel.mɪŋ sens əv æŋˈzaɪ.ə.ti/", vn: "cảm giác lo lắng ngập tràn" },
+        { en: "kind-hearted cleaner", ipa: "/kaɪnd ˈhɑːr.tɪd ˈkliː.nɚ/", vn: "nhân viên vệ sinh tốt bụng" },
+        { en: "emotional roller coaster", ipa: "/ɪˈmoʊ.ʃən.əl ˈroʊ.lɚ ˌkoʊ.stɚ/", vn: "cảm xúc thăng trầm thất thường / tàu lượn cảm xúc" },
+        { en: "extra vigilant", ipa: "/ˈek.strə ˈvɪdʒ.ə.lənt/", vn: "cảnh giác hơn nhiều" }
+      ]
+    },
+    {
+      q: "What kinds of things do people usually lose?",
+      sample: "Well, people frequently <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">misplace small, portable items</mark> that are carried around daily. The most <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">common casualties</mark> are smartphones, keys, wallets, and transit cards because they are often handled in a rush. In crowded public spaces like cafes or public transport, <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">distracted individuals</mark> also tend to leave behind umbrellas, jackets, or shopping bags without realizing it until much later.",
+      trans: "Chà, mọi người thường xuyên làm mất những món đồ nhỏ, di động được mang theo hàng ngày. Những nạn nhân phổ biến nhất là điện thoại thông minh, chìa khóa, ví tiền và thẻ giao thông vì chúng thường được cầm nắm trong lúc vội vã. Ở những nơi công cộng đông đúc như quán cà phê hoặc phương tiện giao thông công cộng, những cá nhân xao lãng cũng có xu hướng để quên ô, áo khoác hoặc túi mua sắm mà không nhận ra cho đến tận sau đó.",
+      vocab: [
+        { en: "misplace small, portable items", ipa: "/mɪsˈpleɪs smɔːl, ˈpɔːr.tə.bəl ˈaɪ.t̬əmz/", vn: "làm mất các vật dụng nhỏ, dễ mang theo" },
+        { en: "common casualties", ipa: "/ˈkɑː.mən ˈkæʒ.əl.iːz/", vn: "những 'nạn nhân' thường gặp (đồ hay mất)" },
+        { en: "distracted individuals", ipa: "/dɪˈstrækt.ɪd ˌɪn.dəˈvɪdʒ.u.əlz/", vn: "những cá nhân bị xao lãng" }
+      ]
+    },
+    {
+      q: "What will people do when losing things?",
+      sample: "When individuals realize they've lost something valuable, their immediate reaction is usually a <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">surge of panic</mark> followed by <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">systematic searching</mark>. Most people will frantically retrace their steps, check their pockets or bags repeatedly, and call their own phone numbers if it's a mobile device. If it's lost in a public venue, they typically approach security personnel, check <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">lost-and-found counters</mark>, or even broadcast appeals on local social media groups.",
+      trans: "Khi cá nhân nhận ra họ bị mất một thứ gì đó có giá trị, phản ứng tức thì của họ thường là một đợt hoảng loạn theo sau là việc tìm kiếm có hệ thống. Hầu hết mọi người sẽ cuống cuồng quay lại các bước đi của mình, kiểm tra túi hoặc túi xách nhiều lần và gọi vào số điện thoại của chính họ nếu đó là thiết bị di động. Nếu nó bị mất ở địa điểm công cộng, họ thường tiếp cận nhân viên bảo mật, kiểm tra quầy đồ thất lạc hoặc thậm chí phát thông báo trên các hội nhóm mạng xã hội địa phương.",
+      vocab: [
+        { en: "surge of panic", ipa: "/sɝːdʒ əv ˈpæn.ɪk/", vn: "sự hoảng loạn dâng trào" },
+        { en: "systematic searching", ipa: "/ˌsɪs.təˈmæt.ɪk ˈsɝː.tʃɪŋ/", vn: "tìm kiếm có hệ thống" },
+        { en: "lost-and-found counters", ipa: "/lɔːst ənd faʊnd ˈkaʊn.t̬ɚz/", vn: "quầy nhận đồ thất lạc" }
+      ]
+    },
+    {
+      q: "Is it effective to offer rewards to find lost things?",
+      sample: "From a practical standpoint, offering a <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">financial incentive</mark> can be quite effective, especially for high-value items like electronics or important documents. It motivates honest finders or security staff to make an extra effort to return the lost property. However, it can occasionally attract dishonest individuals who might <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">hold items hostage</mark> for money, so people need to <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">exercise caution</mark> when broadcasting rewards.",
+      trans: "Từ quan điểm thực tế, việc đưa ra phần thưởng tài chính có thể khá hiệu quả, đặc biệt là đối với các mặt hàng có giá trị cao như đồ điện tử hoặc tài liệu quan trọng. Nó thúc đẩy những người tìm thấy trung thực hoặc nhân viên an ninh nỗ lực hơn nữa để trả lại tài sản bị mất. Tuy nhiên, đôi khi nó có thể thu hút những kẻ không trung thực, những kẻ có thể giữ đồ làm con tin để đòi tiền, vì vậy mọi người cần thận trọng khi công bố phần thưởng.",
+      vocab: [
+        { en: "financial incentive", ipa: "/faɪˈnæn.ʃəl ɪnˈsen.tiv/", vn: "khích lệ / phần thưởng tài chính" },
+        { en: "hold items hostage", ipa: "/hoʊld ˈaɪ.t̬əmz ˈhɑːs.tɪdʒ/", vn: "giữ đồ vật làm con tin" },
+        { en: "exercise caution", ipa: "/ˈek.sɚ.saɪz ˈkɑː.ʃən/", vn: "thận trọng" }
+      ]
+    },
+    {
+      q: "What kinds of people may lose things often?",
+      sample: "Generally speaking, <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">chronically absent-minded</mark> or disorganized individuals tend to misplace items frequently. People who juggle multiple tasks at once—like busy professionals or <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">multitasking students</mark>—are also <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">prone to losing things</mark> due to cognitive overload. Furthermore, youngsters who haven't yet developed strict organizational habits often leave their belongings behind in schools or public parks.",
+      trans: "Nói chung, những người hay đãng trí hoặc thiếu tổ chức thường xuyên làm mất đồ đạc. Những người phải giải quyết nhiều việc cùng lúc — như những chuyên gia bận rộn hoặc học sinh làm nhiều việc cùng lúc — cũng dễ bị mất đồ do quá tải nhận thức. Hơn nữa, những người trẻ tuổi chưa hình thành thói quen tổ chức nghiêm ngặt thường để quên đồ đạc ở trường hoặc công viên công cộng.",
+      vocab: [
+        { en: "chronically absent-minded", ipa: "/ˈkrɑː.nɪk.li ˌæb.sənt ˈmaɪn.dɪd/", vn: "thói quen đãng trí kinh niên" },
+        { en: "multitasking students", ipa: "/ˈmʌl.tiˌtæs.kɪŋ ˈstuː.dənts/", vn: "học sinh làm nhiều việc cùng lúc" },
+        { en: "prone to losing things", ipa: "/proʊn tuː ˈluː.zɪŋ θɪŋz/", vn: "dễ bị mất đồ" }
+      ]
+    },
+    {
+      q: "What can we do to reduce the possibility of losing things?",
+      sample: "To minimize the risk of misplacing valuables, people can adopt a few <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">preventative habits</mark>. Establishing a <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">designated place</mark> for essential items at home—like a specific tray for keys and wallets—prevents carelessness. Additionally, utilizing modern technology such as <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">Bluetooth trackers</mark> attached to keychains or enabling location-sharing features on smartphones can drastically reduce the chances of permanent loss.",
+      trans: "Để giảm thiểu nguy cơ làm mất đồ có giá trị, mọi người có thể áp dụng một số thói quen phòng ngừa. Việc thiết lập một vị trí cố định cho các món đồ thiết yếu ở nhà — như một chiếc khay cụ thể cho chìa khóa và ví — giúp ngăn chặn sự bất cẩn. Ngoài ra, việc tận dụng công nghệ hiện đại như thiết bị theo dõi bluetooth gắn vào móc khóa hoặc bật tính năng chia sẻ vị trí trên điện thoại thông minh có thể làm giảm đáng kể khả năng mất vĩnh viễn.",
+      vocab: [
+        { en: "designated place", ipa: "/ˈdez.ɪɡ.neɪ.tɪd pleɪs/", vn: "nơi chốn được định sẵn / cố định" },
+        { en: "preventative habits", ipa: "/prɪˈven.tə.tɪv ˈhæb.ɪts/", vn: "thói quen phòng ngừa" },
+        { en: "Bluetooth trackers", ipa: "/ˈbluː.tuːθ ˈtræk.ɚz/", vn: "thiết bị định vị bluetooth" }
+      ]
+    },
+    {
+      q: "What do people often feel after losing things?",
+      sample: "Initially, individuals typically experience a <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">wave of shock</mark>, intense frustration, and <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">self-blame</mark>, especially if the lost item holds high sentimental or monetary value. This negative emotional state can temporarily disrupt their focus and mood. However, once they accept the loss or manage to recover the item, those intense feelings usually <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">subside into relief</mark> or a valuable lesson learned about being more mindful.",
+      trans: "Ban đầu, các cá nhân thường trải qua một làn sóng sốc, sự thất vọng mãnh liệt và tự trách bản thân, đặc biệt nếu món đồ bị mất có giá trị tinh thần hoặc tiền bạc cao. Trạng thái cảm xúc tiêu cực này có thể tạm thời làm gián đoạn sự tập trung và tâm trạng của họ. Tuy nhiên, một khi họ chấp nhận mất mát hoặc tìm lại được món đồ, những cảm giác mãnh liệt đó thường lắng xuống thành sự nhẹ nhõm hoặc một bài học quý giá về việc cẩn thận hơn.",
+      vocab: [
+        { en: "wave of shock", ipa: "/weɪv əv ʃɑːk/", vn: "làn sóng sốc / sững sờ" },
+        { en: "self-blame", ipa: "/self bleɪm/", vn: "tự trách bản thân" },
+        { en: "subside into relief", ipa: "/səbˈsaɪd ˈɪn.tə rɪˈliːf/", vn: "lắng xuống thành sự nhẹ nhõm" }
+      ]
+    }
+  ],
+
+// 3: Describe a person you only met once recently and want to know more about & Part 3
+  3: [
+    {
+      q: "Describe a person you only met once recently and want to know more about",
+      sample: "Well, today I'm gonna talk about a <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">fascinating individual</mark> I crossed paths with just a few weeks ago at a local educational workshop here in Da Nang—a guest speaker who specializes in digital curriculum design. To give you some basic information, his name is Minh, and he delivered an inspiring presentation on integrating artificial intelligence into modern language teaching. \n\nI still remember the time—it was during a Saturday afternoon seminar when the auditorium was packed with educators. After his talk, I approached him during the tea break to discuss some technical challenges in automated text processing, and we ended up having a deeply engaging conversation about educational technology. \n\nI want to know more about him because his innovative approach to blending coding with pedagogy completely <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">sparked my intellectual curiosity</mark>. He shared some brilliant insights on <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">streamlining instructional materials</mark> that I'd love to learn and adapt for my own teaching practice. \n\nAt first, I felt a bit intimidated by his <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">vast expertise</mark>, but as we chatted, I found him <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">remarkably approachable</mark> and generous with his knowledge. Looking to the future, if I get the chance to collaborate or catch up with him again, I would definitely dive deeper into his professional methodologies. Well, I guess that's all about this <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">remarkable encounter</mark>.",
+      trans: "Vâng, hôm nay tôi sẽ nói về một cá nhân vô cùng thú vị mà tôi tình cờ gặp cách đây vài tuần tại một hội thảo giáo dục địa phương ở Đà Nẵng — một diễn giả khách mời chuyên về thiết kế chương trình giảng dạy kỹ thuật số. Cung cấp một số thông tin cơ bản, tên anh ấy là Minh, và anh ấy đã có một bài thuyết trình truyền cảm hứng về việc tích hợp trí tuệ nhân tạo vào giảng dạy ngôn ngữ hiện đại.\n\nTôi vẫn nhớ thời điểm đó — đó là trong một buổi hội thảo chiều thứ Bảy khi hội trường đông nghẹt các nhà giáo dục. Sau bài nói chuyện của anh ấy, tôi đã tiếp cận anh ấy trong giờ nghỉ giải lao để thảo luận về một số thách thức kỹ thuật trong việc xử lý văn bản tự động, và chúng tôi đã có một cuộc trò chuyện vô cùng cuốn hút về công nghệ giáo dục.\n\nTôi muốn biết thêm về anh ấy vì cách tiếp cận sáng tạo của anh ấy trong việc kết hợp lập trình với sư phạm đã hoàn toàn khơi dậy sự tò mò trí tuệ của tôi. Anh ấy đã chia sẻ một số góc nhìn xuất sắc về việc hợp lý hóa tài liệu giảng dạy mà tôi rất muốn học hỏi và áp dụng cho thực tiễn giảng dạy của chính mình.\n\nLúc đầu, tôi cảm thấy hơi e dè trước chuyên môn rộng lớn của anh ấy, nhưng khi chúng tôi trò chuyện, tôi thấy anh ấy cực kỳ dễ gần và hào phóng với kiến thức của mình. Nhìn về tương lai, nếu tôi có cơ hội hợp tác hoặc trò chuyện lại với anh ấy, tôi chắc chắn sẽ đào sâu hơn vào các phương pháp chuyên môn của anh ấy. Chà, tôi đoán đó là tất cả về cuộc gặp gỡ đáng chú ý này.",
+      vocab: [
+        { en: "fascinating individual", ipa: "/ˈfæs.ə.neɪ.tɪŋ ˌɪn.dəˈvɪdʒ.u.əl/", vn: "cá nhân vô cùng thú vị" },
+        { en: "sparked my intellectual curiosity", ipa: "/spɑːrkt maɪ ˌɪn.təlˈek.tʃu.əl ˌkjʊr.iˈɑː.sə.ti/", vn: "khơi dậy sự tò mò trí tuệ của tôi" },
+        { en: "streamlining instructional materials", ipa: "/ˈstriːm.laɪ.nɪŋ ɪnˈstrʌk.shən.əl məˈtɪr.i.əlz/", vn: "hợp lý hóa các tài liệu giảng dạy" },
+        { en: "vast expertise", ipa: "/væst ˌek.spɝːˈtiːz/", vn: "chuyên môn rộng lớn / uyên bác" },
+        { en: "remarkably approachable", ipa: "/rɪˈmɑːr.kə.bli əˈproʊ.tʃə.bəl/", vn: "cực kỳ dễ gần / niềm nở" },
+        { en: "remarkable encounter", ipa: "/rɪˈmɑːr.kə.bəl ɪnˈkaʊn.t̬ɚ/", vn: "cuộc gặp gỡ đáng nhớ / ấn tượng" }
+      ]
+    },
+    {
+      q: "What can we do to leave a good impression on people we meet for the first time?",
+      sample: "To leave a <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">favorable and lasting impression</mark> during an initial encounter, individuals should focus on a few key behaviors. First and foremost, maintaining good eye contact and offering a warm, genuine smile instantly conveys friendliness and confidence. Additionally, being an <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">active listener</mark>—paying close attention without interrupting—shows respect for the other person. Finally, dressing appropriately for the occasion and practicing <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">social grace</mark> demonstrate thoughtfulness and social elegance.",
+      trans: "Để tạo ấn tượng tốt đẹp và lâu dài trong một cuộc gặp gỡ ban đầu, các cá nhân nên tập trung vào một số hành vi quan trọng. Trước hết và trên hết, việc duy trì giao tiếp bằng mắt tốt và nở nụ cười ấm áp, chân thành ngay lập tức truyền tải sự thân thiện và tự tin. Ngoài ra, việc trở thành một người lắng nghe chủ động — chú ý lắng nghe mà không ngắt lời — thể hiện sự tôn trọng đối với người khác. Cuối cùng, ăn mặc phù hợp với hoàn cảnh và thực hiện phép lịch sự thể hiện sự chu đáo và duyên dáng trong xã hội.",
+      vocab: [
+        { en: "favorable and lasting impression", ipa: "/ˈfeɪ.vɚ.ə.bəl ænd ˈlæs.tɪŋ ɪmˈpreʃ.ən/", vn: "ấn tượng tốt đẹp và lâu dài" },
+        { en: "active listener", ipa: "/ˈæk.tɪv ˈlɪs.ən.ɚ/", vn: "người lắng nghe chủ động" },
+        { en: "social grace", ipa: "/ˈsoʊ.ʃəl ɡreɪs/", vn: "sự thanh lịch / khéo léo trong giao tiếp xã hội" }
+      ]
+    },
+    {
+      q: "What should we not talk about when we meet a person for the first time?",
+      sample: "When meeting someone new, it's generally wise to <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">steer clear of</mark> sensitive or controversial topics that might trigger discomfort or heated arguments. Subjects like personal income, religious beliefs, <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">partisan politics</mark>, and private medical history should be strictly avoided. Bringing up these intrusive or <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">polarizing issues</mark> can easily create awkwardness and ruin the potential for building a harmonious connection.",
+      trans: "Khi gặp một người mới, nhìn chung khôn ngoan nhất là tránh xa các chủ đề nhạy cảm hoặc gây tranh cãi có thể gây ra sự khó chịu hoặc tranh cãi nảy lửa. Các chủ đề như thu nhập cá nhân, niềm tin tôn giáo, chính trị đảng phái và lịch sử y tế riêng tư nên được tránh hoàn toàn. Việc đưa ra những vấn đề mang tính xâm phạm hoặc gây chia rẽ này có thể dễ dàng tạo ra sự ngượng ngùng và phá hủy tiềm năng xây dựng mối liên hệ hài hòa.",
+      vocab: [
+        { en: "steer clear of", ipa: "/stɪr klɪr əv/", vn: "tránh xa cái gì đó" },
+        { en: "partisan politics", ipa: "/ˈpɑːr.tə.zən ˈpɑː.lə.tɪks/", vn: "chính trị đảng phái" },
+        { en: "polarizing issues", ipa: "/ˈpoʊ.lɚ.aɪ.zɪŋ ˈɪʃ.uːz/", vn: "các vấn đề gây chia rẽ sâu sắc" }
+      ]
+    },
+    {
+      q: "How do people make friends in Vietnam?",
+      sample: "In Vietnam, making friends typically <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">happens organically</mark> through shared daily environments like schools, workplaces, or neighborhood communities. Vietnamese people are <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">naturally warm and hospitable</mark>, so friendships often form swiftly over casual activities such as sipping iced coffee at a street-side cafe, sharing meals, or participating in group sports. Furthermore, modern digital platforms and social media clubs have become popular channels for young adults to connect over <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">common hobbies</mark>.",
+      trans: "Ở Việt Nam, việc kết bạn thường diễn ra một cách tự nhiên thông qua các môi trường hàng ngày chung như trường học, nơi làm việc hoặc cộng đồng khu phố. Người Việt Nam vốn dĩ nồng hậu và hiếu khách, vì vậy tình bạn thường hình thành nhanh chóng qua các hoạt động thông thường như nhâm nhi cà phê đá ở quán vỉa hè, chia sẻ bữa ăn hoặc tham gia các môn thể thao nhóm. Hơn nữa, các nền tảng kỹ thuật số hiện đại và các câu lạc bộ mạng xã hội đã trở thành kênh phổ biến để giới trẻ kết nối qua các sở thích chung.",
+      vocab: [
+        { en: "happens organically", ipa: "/ˈhæp.ənz ɔːrˈɡæn.ɪ.kəl.i/", vn: "diễn ra một cách tự nhiên / hữu cơ" },
+        { en: "naturally warm and hospitable", ipa: "/ˈnætʃ.ɚ.əl.i wɔːrm ænd hɑːˈspɪt.ə.bəl/", vn: "vốn dĩ ấm áp và hiếu khách" },
+        { en: "common hobbies", ipa: "/ˈkɑː.mən ˈhɑːb.iz/", vn: "các sở thích chung" }
+      ]
+    },
+    {
+      q: "On what occasions do people like to make friends?",
+      sample: "People are usually most open to making new friends during <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">transitional phases in life</mark> or at social gatherings designed for networking. Occasions like starting university, joining a new workplace, attending workshops, or moving to a different city naturally put individuals in contact with <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">like-minded peers</mark>. Additionally, festive celebrations, weddings, and community volunteer events provide relaxed, <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">joyful environments</mark> that encourage friendly interactions.",
+      trans: "Mọi người thường cởi mở nhất trong việc kết bạn mới trong các giai đoạn chuyển tiếp trong cuộc sống hoặc tại các buổi tụ họp xã hội được thiết kế để mở rộng quan hệ. Các dịp như bắt đầu đại học, gia nhập nơi làm việc mới, tham gia hội thảo hoặc chuyển đến một thành phố khác tự nhiên đưa các cá nhân tiếp xúc với những người cùng chí hướng. Ngoài ra, các lễ hội, đám cưới và sự kiện tình nguyện cộng đồng cung cấp môi trường thư giãn, vui tươi khuyến khích các tương tác thân thiện.",
+      vocab: [
+        { en: "transitional phases in life", ipa: "/trænˈzɪʃ.ən.əl feɪzɪz ɪn laɪf/", vn: "các giai đoạn chuyển giao trong cuộc sống" },
+        { en: "like-minded peers", ipa: "/laɪk ˈmaɪn.dɪd pɪrz/", vn: "những người bạn đồng trang lứa có cùng chí hướng" },
+        { en: "joyful environments", ipa: "/ˈdʒɔɪ.fəl ɪnˈvaɪ.rən.ments/", vn: "môi trường vui tươi" }
+      ]
+    },
+    {
+      q: "Is it important to have the same hobbies and interests when making friends?",
+      sample: "While sharing identical hobbies can certainly <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">accelerate the bonding process</mark> by giving you plenty to talk about, I don't believe it's an <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">absolute prerequisite</mark>. Having diverse interests can actually enrich a friendship, as it allows individuals to introduce each other to new perspectives and experiences. Ultimately, core values like <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">mutual respect, loyalty, and empathy</mark> matter far more than sharing the exact same pastimes.",
+      trans: "Mặc dù việc chia sẻ các sở thích giống hệt nhau chắc chắn có thể đẩy nhanh quá trình gắn kết bằng cách cung cấp cho bạn nhiều điều để trò chuyện, nhưng tôi không tin đó là điều kiện tiên quyết tuyệt đối. Việc có các sở thích đa dạng thực sự có thể làm phong phú thêm tình bạn, vì nó cho phép các cá nhân giới thiệu cho nhau những góc nhìn và trải nghiệm mới. Cuối cùng, các giá trị cốt lõi như sự tôn trọng lẫn nhau, lòng trung thành và sự đồng cảm quan trọng hơn nhiều so với việc có chung hoàn toàn các trò giải trí.",
+      vocab: [
+        { en: "accelerate the bonding process", ipa: "/əkˈsel.ə.reɪt ðə ˈbɑːn.dɪŋ ˈprɑː.ses/", vn: "đẩy nhanh quá trình gắn kết" },
+        { en: "absolute prerequisite", ipa: "/ˈæb.sə.luːt ˈpriːˈkwɪz.ə.tɪv/", vn: "điều kiện tiên quyết tuyệt đối" },
+        { en: "mutual respect, loyalty, and empathy", ipa: "/ˈmjuː.tʃu.əl rɪˈspekt, ˈlɔɪ.əl.ti, ænd ˈem.pə.θi/", vn: "sự tôn trọng lẫn nhau, lòng trung thành và sự đồng cảm" }
+      ]
+    },
+    {
+      q: "What qualities make true friends?",
+      sample: "True friendship is built on a foundation of <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">profound trust</mark>, unwavering support, and <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">emotional safety</mark>. A genuine friend stands by you during difficult times rather than just celebrating your successes. Furthermore, honesty accompanied by kindness is crucial, meaning a true friend will offer constructive feedback when needed without judgment. Above all, consistency and mutual care over the long haul define an <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">authentic bond</mark>.",
+      trans: "Tình bạn đích thực được xây dựng trên nền tảng của niềm tin sâu sắc, sự hỗ trợ không lay chuyển và sự an toàn về mặt cảm xúc. Một người bạn chân chính luôn sát cánh bên bạn trong những lúc khó khăn thay vì chỉ ăn mừng những thành công của bạn. Hơn nữa, sự trung thực đi kèm với lòng tốt là rất quan trọng, có nghĩa là một người bạn thực sự sẽ đưa ra phản hồi mang tính xây dựng khi cần thiết mà không phán xét. Hơn hết, sự kiên định và quan tâm lẫn nhau trong suốt chặng đường dài định nghĩa một mối liên kết chân chính.",
+      vocab: [
+        { en: "profound trust", ipa: "/prəˈfaʊnd trʌst/", vn: "niềm tin sâu sắc" },
+        { en: "emotional safety", ipa: "/ɪˈmoʊ.ʃən.əl ˈseɪf.ti/", vn: "sự an toàn về mặt cảm xúc" },
+        { en: "authentic bond", ipa: "/ɔːˈθen.tɪk bɑːnd/", vn: "mối liên kết chân chính" }
+      ]
+    }
+  ],
+
+
+// 4: Describe a course that impressed you a lot & Part 3
+  4: [
+    {
+      q: "Describe a course that impressed you a lot",
+      sample: "Well, today I'm gonna talk about an exceptionally <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">transformative online course</mark> I took a few months ago, which focused on advanced pedagogical methods and digital curriculum design. To give you some basic information, it was an international <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">professional development program</mark> hosted by a renowned educational platform, aimed at modernizing teaching techniques for language educators. \n\nI still remember the time—it was during my summer break when I had a <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">dedicated block of leisure time</mark> to invest in my professional growth. Every evening, I would log into the virtual portal, watch detailed video lectures, participate in interactive coding workshops, and collaborate with fellow teachers from across Southeast Asia on <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">practical lesson-planning projects</mark>. \n\nThis course impressed me a lot because it completely revolutionized how I approach instructional design. Instead of relying on traditional rote learning, it introduced me to <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">cutting-edge digital tools</mark> and student-centered frameworks that made learning much more engaging and effective. \n\nAt first, mastering the complex software tools was quite daunting, but the sense of accomplishment I felt upon completing the final project was immensely rewarding. Looking to the future, if I hadn't enrolled in that program, my teaching methods would probably still be outdated. Well, I guess that's all about this remarkable learning experience.",
+      trans: "Vâng, hôm nay tôi sẽ nói về một khóa học trực tuyến đặc biệt mang tính chuyển đổi mà tôi đã tham gia vài tháng trước, tập trung vào các phương pháp sư phạm tiên tiến và thiết kế chương trình giảng dạy kỹ thuật số. Cung cấp một số thông tin cơ bản, đó là một chương trình phát triển chuyên môn quốc tế được tổ chức bởi một nền tảng giáo dục nổi tiếng, nhằm hiện đại hóa các kỹ thuật giảng dạy cho các nhà giáo dục ngôn ngữ.\n\nTôi vẫn nhớ thời điểm đó — đó là trong kỳ nghỉ hè khi tôi có một khoảng thời gian rảnh rỗi chuyên biệt để đầu tư cho sự phát triển nghề nghiệp của mình. Mỗi buổi tối, tôi sẽ đăng nhập vào cổng thông tin ảo, xem các bài giảng video chi tiết, tham gia các hội thảo lập trình tương tác và cộng tác với các đồng nghiệp giáo viên từ khắp Đông Nam Á trong các dự án lập kế hoạch bài học thực tế.\n\nKhóa học này gây ấn tượng mạnh với tôi vì nó hoàn toàn cách mạng hóa cách tôi tiếp cận thiết kế giảng dạy. Thay vì dựa vào việc học vẹt truyền thống, nó đã giới thiệu cho tôi các công cụ kỹ thuật số tiên tiến và các khuôn khổ tập trung vào học sinh giúp việc học trở nên hấp dẫn và hiệu quả hơn nhiều.\n\nLúc đầu, việc làm chủ các công cụ phần mềm phức tạp khá nản chí, nhưng cảm giác thành tựu mà tôi cảm thấy khi hoàn thành dự án cuối cùng vô cùng đáng giá. Nhìn về tương lai, nếu tôi không đăng ký chương trình đó, phương pháp giảng dạy của tôi có lẽ vẫn sẽ lỗi thời. Chà, tôi đoán đó là tất cả về trải nghiệm học tập đáng chú ý này.",
+      vocab: [
+        { en: "transformative online course", ipa: "/trænsˈfɔːr.mə.tɪv ˈɑːn.laɪn kɔːrs/", vn: "khóa học trực tuyến mang tính thay đổi lớn" },
+        { en: "professional development program", ipa: "/prəˈfeʃ.ən.əl dɪˈvel.əp.mənt ˈproʊ.ɡræm/", vn: "chương trình phát triển chuyên môn" },
+        { en: "dedicated block of leisure time", ipa: "/ˈded.ə.keɪ.tɪd blɑːk əv ˈliː.ʒɚ taɪm/", vn: "khoảng thời gian rảnh rỗi chuyên biệt" },
+        { en: "practical lesson-planning projects", ipa: "/ˈpræk.tɪ.kəl ˈles.ən ˈplæn.ɪŋ ˈprɑː.dʒekts/", vn: "các dự án lập kế hoạch bài học thực tế" },
+        { en: "cutting-edge digital tools", ipa: "/ˈkʌt.ɪŋ edʒ ˈdɪdʒ.ə.təl tuːlz/", vn: "các công cụ kỹ thuật số tối tân / tiên tiến" }
+      ]
+    },
+    {
+      q: "What do people need to remember in their daily lives?",
+      sample: "In the <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">hustle and bustle of modern life</mark>, individuals need to keep track of a wide array of essential information to function smoothly. People must remember practical responsibilities, such as work deadlines, scheduled appointments, and <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">financial commitments</mark> like bill payments. Additionally, keeping social obligations in mind—like birthdays or family gatherings—is crucial for <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">maintaining healthy interpersonal relationships</mark>.",
+      trans: "Trong sự hối hả và nhộn nhịp của cuộc sống hiện đại, các cá nhân cần theo dõi một loạt thông tin thiết yếu để hoạt động trơn tru. Mọi người phải ghi nhớ các trách nhiệm thực tế, chẳng hạn như thời hạn công việc, các cuộc hẹn đã lên lịch và các cam kết tài chính như thanh toán hóa đơn. Ngoài ra, việc ghi nhớ các nghĩa vụ xã hội — như sinh nhật hoặc các buổi sum họp gia đình — là rất quan trọng để duy trì các mối quan hệ liên cá nhân lành mạnh.",
+      vocab: [
+        { en: "hustle and bustle of modern life", ipa: "/ˈhʌs.əl ænd ˈbʌs.əl əv ˈmɑː.dɚn laɪf/", vn: "sự hối hả và nhộn nhịp của cuộc sống hiện đại" },
+        { en: "financial commitments", ipa: "/faɪˈnæn.ʃəl kəˈmɪt.mənts/", vn: "các cam kết tài chính" },
+        { en: "maintaining healthy interpersonal relationships", ipa: "/meɪnˈteɪn.ɪŋ ˈhel.θi ˌɪn.t̬ɚˈpɝː.sən.əl rɪˈleɪ.ʃənʃɪps/", vn: "duy trì các mối quan hệ xã hội/cá nhân lành mạnh" }
+      ]
+    },
+    {
+      q: "What can we learn from history?",
+      sample: "History serves as an <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">invaluable repository of human experience</mark>. By studying past events, societal collapses, and political triumphs, we can understand the <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">root causes of contemporary conflicts</mark> and avoid repeating previous mistakes. Furthermore, history teaches us empathy and resilience by showcasing how preceding generations overcame massive crises, providing us with <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">valuable guidance for future decision-making</mark>.",
+      trans: "Lịch sử đóng vai trò là một kho chứa kinh nghiệm vô giá của nhân loại. Bằng cách nghiên cứu các sự kiện trong quá khứ, sự sụp đổ của xã hội và chiến thắng chính trị, chúng ta có thể hiểu được nguyên nhân gốc rễ của các xung đột đương đại và tránh lặp lại những sai lầm trước đây. Hơn nữa, lịch sử dạy chúng ta sự đồng cảm và khả năng kiên cường bằng cách trưng bày cách các thế hệ đi trước vượt qua các cuộc khủng hoảng lớn, cung cấp cho chúng ta sự hướng dẫn có giá trị cho việc ra quyết định trong tương lai.",
+      vocab: [
+        { en: "invaluable repository of human experience", ipa: "/ɪnˈvæl.jə.bəl rɪˈpɑː.zə.tɔːr.i əv ˈhjuː.mən ɪkˈspɪr.i.əns/", vn: "kho tàng kinh nghiệm nhân loại vô giá" },
+        { en: "root causes of contemporary conflicts", ipa: "/ruːt kɑːzɪz əv kənˈtem.pə.rer.i ˈkɑːn.flɪkts/", vn: "nguyên nhân gốc rễ của các cuộc xung đột đương đại" },
+        { en: "valuable guidance for future decision-making", ipa: "/ˈvæl.jə.bəl ˈɡaɪ.dəns fɔːr ˈfjuː.tʃɚ dɪˈsɪzh.ən ˌmeɪ.kɪŋ/", vn: "sự định hướng quý giá cho việc ra quyết định tương lai" }
+      ]
+    },
+    {
+      q: "Why do some people have a better memory than others?",
+      sample: "Memory retention varies significantly among individuals due to a combination of genetic factors, cognitive training, and lifestyle habits. People who regularly engage in mental exercises—such as reading, learning new languages, or playing instruments—tend to build <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">stronger neural pathways</mark>. Moreover, adequate sleep, balanced nutrition, and low-stress environments play a <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">pivotal role in optimizing brain function</mark> and memory recall.",
+      trans: "Khả năng lưu giữ trí nhớ thay đổi đáng kể giữa các cá nhân do sự kết hợp của các yếu tố di truyền, rèn luyện nhận thức và thói quen lối sống. Những người thường xuyên tham gia các bài tập trí tuệ — như đọc sách, học ngôn ngữ mới hoặc chơi nhạc cụ — có xu hướng xây dựng các đường dẫn thần kinh mạnh mẽ hơn. Hơn nữa, giấc ngủ đầy đủ, dinh dưỡng cân bằng và môi trường ít căng thẳng đóng vai trò nòng cốt trong việc tối ưu hóa chức năng não và khả năng nhớ lại.",
+      vocab: [
+        { en: "stronger neural pathways", ipa: "/ˈstrɔːŋ.ɡɚ ˈnʊr.əl ˈpæθ.weɪz/", vn: "các đường dẫn thần kinh mạnh mẽ hơn" },
+        { en: "pivotal role in optimizing brain function", ipa: "/ˈpɪv.ə.təl roʊl ɪn ˈɑːp.stə.maɪ.zɪŋ breɪn ˈfʌŋk.ʃən/", vn: "vai trò nòng cốt trong việc tối ưu hóa chức năng não bộ" }
+      ]
+    },
+    {
+      q: "Do people like things of memorial significance?",
+      sample: "Yes, absolutely. Human beings are deeply emotional creatures who naturally cherish objects and places that hold sentimental or historical value. Items like family heirlooms, photographs, or souvenirs from significant life events serve as <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">tangible anchors to cherished memories</mark>. They provide a comforting sense of identity and continuity, reminding us of our personal roots and <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">milestone achievements</mark>.",
+      trans: "Vâng, chắc chắn rồi. Con người là sinh vật giàu cảm xúc, vốn dĩ trân trọng những đồ vật và địa điểm mang giá trị tinh thần hoặc lịch sử. Các món đồ như gia bảo gia đình, ảnh chụp hoặc đồ lưu niệm từ các sự kiện quan trọng trong đời đóng vai trò như những chiếc mỏ neo hữu hình đối với những kỷ niệm đáng trân trọng. Chúng mang lại cảm giác thoải mái về bản sắc và sự liên tục, nhắc nhở chúng ta về cội nguồn cá nhân và những cột mốc thành tựu.",
+      vocab: [
+        { en: "tangible anchors to cherished memories", ipa: "/ˈtæn.dʒə.bəl ˈæŋ.kɚz tuː ˈtʃer.ɪʃt ˈmem.ər.iz/", vn: "mỏ neo hữu hình gắn liền với ký ức quý giá" },
+        { en: "milestone achievements", ipa: "/ˈmaɪl.stoʊn əˈtʃiːv.mənts/", vn: "các cột mốc thành tựu" }
+      ]
+    },
+    {
+      q: "Which can help people remember things better, words or photos?",
+      sample: "Both words and photos serve distinct cognitive functions, but photos generally trigger memory retrieval much faster due to the <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">human brain's superior visual processing capability</mark>. When people look at a photograph, it instantly evokes a flood of emotions and contextual details of an event. On the other hand, words are essential for retaining complex concepts, logical arguments, and abstract ideas, making them <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">complementary tools</mark> rather than mutually exclusive.",
+      trans: "Cả từ ngữ và hình ảnh đều phục vụ các chức năng nhận thức khác nhau, nhưng hình ảnh thường kích hoạt việc truy xuất trí nhớ nhanh hơn nhiều nhờ khả năng xử lý hình ảnh ưu việt của bộ não con người. Khi mọi người nhìn vào một bức ảnh, nó ngay lập tức gợi lên một loạt cảm xúc và chi tiết bối cảnh của một sự kiện. Mặt khác, từ ngữ rất cần thiết để lưu giữ các khái niệm phức tạp, lập luận logic và ý tưởng trừu tượng, biến chúng thành các công cụ bổ sung cho nhau chứ không loại trừ lẫn nhau.",
+      vocab: [
+        { en: "human brain's superior visual processing capability", ipa: "/ˈhjuː.mən breɪnz suːˈpɪr.i.ɚ ˈvɪʒ.u.əl ˈprɑː.ses.ɪŋ ˈkeɪ.pəˌbɪl.ə.ti/", vn: "khả năng xử lý thị giác vượt trội của não bộ con người" },
+        { en: "complementary tools", ipa: "/ˌkɑːm.pləˈmen.tər.i tuːlz/", vn: "các công cụ bổ trợ cho nhau" }
+      ]
+    },
+    {
+      q: "Can technology help people remember things better? How?",
+      sample: "Without a doubt, technology has become an indispensable external memory aid in the digital age. Smartphone apps, digital calendars, and cloud-based reminders allow people to <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">offload repetitive mental tasks</mark> like scheduling and memorizing contact details. However, while tech prevents us from missing appointments, heavy reliance on digital storage can sometimes lead to an <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">atrophy of our natural memorization abilities</mark>, making a balanced approach necessary.",
+      trans: "Không còn nghi ngờ gì nữa, công nghệ đã trở thành một trợ lý trí nhớ bên ngoài không thể thiếu trong kỷ nguyên số. Các ứng dụng điện thoại thông minh, lịch kỹ thuật số và lời nhắc trên nền tảng đám mây cho phép mọi người giảm bớt gánh nặng các nhiệm vụ tinh thần lặp đi lặp lại như lên lịch và ghi nhớ chi tiết liên hệ. Tuy nhiên, mặc dù công nghệ ngăn chúng ta bỏ lỡ các cuộc hẹn, sự phụ thuộc nặng nề vào bộ nhớ kỹ thuật số đôi khi có thể dẫn đến sự suy giảm khả năng ghi nhớ tự nhiên của chúng ta, làm cho một cách tiếp cận cân bằng trở nên cần thiết.",
+      vocab: [
+        { en: "offload repetitive mental tasks", ipa: "/ˈɑːf.loʊd rɪˈpet.ə.tɪv ˈmen.təl tæsks/", vn: "giảm bớt gánh nặng các nhiệm vụ tinh thần lặp lại" },
+        { en: "atrophy of our natural memorization abilities", ipa: "/ˈæt.rə.fi əv aʊr ˈnætʃ.ɚ.əl ˌmem.ər.aɪˈzeɪ.ʃən əˈbɪl.ə.tiz/", vn: "sự teo tóp / suy giảm khả năng ghi nhớ tự nhiên" }
+      ]
+    }
+  ],
+
+// 5: Describe a gift you would like to buy for your friend & Part 3
+  5: [
+    {
+      q: "Describe a gift you would like to buy for your friend",
+      sample: "Well, today I'm gonna talk about a thoughtful gift I'd love to buy for my closest friend, Linh, who has been a tremendous source of support throughout my teaching career. To give you some basic information, we first crossed paths about five years ago while working together at an English language center in Da Nang, and we've been inseparable ever since. \n\nWhen it comes to choosing a gift for her, I don't just pick something at random; instead, I carefully observe her daily habits, current needs, and subtle preferences over the weeks leading up to her birthday. Since she's an avid bookworm and a fellow educator who spends hours grading papers, I would love to purchase an <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">ergonomic reading lamp</mark> alongside a collection of classic literature she's been longing to read. \n\nI would choose this specific present because it brilliantly combines <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">practicality and personal care</mark>. Knowing how much strain she puts on her eyes during long hours of lesson preparation, this gift would not only alleviate her physical discomfort but also serve as a constant reminder of our cherished friendship. \n\nAt first, I considered buying something flashy like designer accessories, but I realized <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">sentimental value and utility</mark> matter far more to her. Looking to the future, if I manage to surprise her with this, I'm certain it will bring a genuine smile to her face. Well, I guess that's all about the gift I plan to get her.",
+      trans: "Vâng, hôm nay tôi sẽ nói về một món quà chu đáo mà tôi rất muốn mua cho người bạn thân nhất của mình, Linh, người đã là một nguồn hỗ trợ to lớn trong suốt sự nghiệp giảng dạy của tôi. Cung cấp một số thông tin cơ bản, chúng tôi lần đầu gặp nhau khoảng năm năm trước khi làm việc cùng nhau tại một trung tâm tiếng Anh ở Đà Nẵng, và chúng tôi đã gắn bó không rời kể từ đó.\n\nKhi nói đến việc chọn quà cho cô ấy, tôi không chỉ chọn một thứ ngẫu nhiên; thay vào đó, tôi quan sát kỹ các thói quen hàng ngày, nhu cầu hiện tại và sở thích tinh tế của cô ấy trong những tuần dẫn đến sinh nhật cô ấy. Vì cô ấy là một người cuồng đọc sách và là một đồng nghiệp giáo viên dành hàng giờ chấm bài, tôi rất muốn mua một chiếc đèn đọc sách công thái học bên cạnh bộ sưu tập văn học cổ điển mà cô ấy ao ước bấy lâu nay.\n\nTôi sẽ chọn món quà cụ thể này vì nó kết hợp xuất sắc giữa tính thiết thực và sự quan tâm cá nhân. Biết rằng cô ấy phải điều tiết mắt nhiều như thế nào trong nhiều giờ chuẩn bị bài học, món quà này sẽ không chỉ làm giảm bớt sự khó chịu về thể chất mà còn phục vụ như một lời nhắc nhở thường xuyên về tình bạn trân quý của chúng tôi.\n\nLúc đầu, tôi đã nghĩ đến việc mua thứ gì đó hào nhoáng như phụ kiện thiết kế, nhưng tôi nhận ra giá trị tinh thần và tính hữu dụng quan trọng đối với cô ấy hơn rất nhiều. Nhìn về tương lai, nếu tôi có thể gây bất ngờ cho cô ấy bằng món quà này, tôi chắc chắn nó sẽ mang lại nụ cười chân thành trên khuôn mặt cô ấy. Chà, tôi đoán đó là tất cả về món quà tôi định tặng cô ấy.",
+      vocab: [
+        { en: "ergonomic reading lamp", ipa: "/ˌɝː.ɡəˈnɑːm.ɪk ˈriː.dɪŋ læmp/", vn: "đèn đọc sách thiết kế công thái học" },
+        { en: "practicality and personal care", ipa: "/ˌpræk.tɪˈkæl.ə.ti ænd ˈpɝː.sən.əl ker/", vn: "tính thiết thực và sự quan tâm cá nhân" },
+        { en: "sentimental value and utility", ipa: "/ˌsen.tənˈmen.təl ˈvæl.juː ænd juːˈtɪl.ə.ti/", vn: "giá trị tinh thần và tính hữu dụng" }
+      ]
+    },
+    {
+      q: "When do people normally send gifts to others?",
+      sample: "People typically exchange gifts during <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">milestone celebrations</mark> and major cultural festivals throughout the year. Common occasions include birthdays, weddings, graduations, and housewarming parties, where presenting a gift is a <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">conventional way to express congratulations</mark> and share joy. Additionally, during traditional holidays like Lunar New Year in Vietnam, people frequently send gifts to family members, mentors, and business partners as a <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">token of gratitude and respect</mark>.",
+      trans: "Mọi người thường trao đổi quà tặng trong các lễ kỷ niệm cột mốc và các lễ hội văn hóa lớn trong suốt cả năm. Các dịp phổ biến bao gồm sinh nhật, đám cưới, lễ tốt nghiệp và tiệc mừng tân gia, nơi việc tặng quà là một cách thông thường để bày tỏ lời chúc mừng và chia sẻ niềm vui. Ngoài ra, trong các ngày lễ truyền thống như Tết Nguyên Đán ở Việt Nam, mọi người thường xuyên gửi quà cho các thành viên gia đình, người hướng dẫn và đối tác kinh doanh như một biểu hiện của lòng biết ơn và sự tôn trọng.",
+      vocab: [
+        { en: "milestone celebrations", ipa: "/ˈmaɪl.stoʊn ˌsel.əˈbreɪ.shənz/", vn: "các lễ kỷ niệm dấu mốc quan trọng" },
+        { en: "conventional way to express congratulations", ipa: "/kənˈven.ʃən.əl weɪ tuː ɪkˈspres kənˌgrætʃ.əˈleɪ.shənz/", vn: "cách thông thường để bày tỏ lời chúc mừng" },
+        { en: "token of gratitude and respect", ipa: "/ˈtoʊ.kən əv ˈɡræt.ɪ.tuːd ænd rɪˈspekt/", vn: "biểu hiện của lòng biết ơn và sự tôn trọng" }
+      ]
+    },
+    {
+      q: "Is it hard to choose a gift?",
+      sample: "From my perspective, finding the <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">ideal present</mark> can actually be quite challenging, especially if you want to buy something truly meaningful. It requires careful consideration of the recipient's personal tastes, lifestyle, and current needs. If you don't know the person very well, you might spend hours <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">second-guessing yourself</mark> or worrying that they won't appreciate the item, which can turn gift-shopping into a rather <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">stressful endeavor</mark>.",
+      trans: "Từ góc độ của tôi, việc tìm kiếm món quà lý tưởng thực sự có thể khá thử thách, đặc biệt nếu bạn muốn buy một thứ gì đó thực sự ý nghĩa. Nó đòi hỏi sự cân nhắc kỹ lưỡng về sở thích cá nhân, lối sống và nhu cầu hiện tại của người nhận. Nếu bạn không hiểu rõ về người đó, bạn có thể dành hàng giờ tự nghi ngờ bản thân hoặc lo lắng rằng họ sẽ không đánh giá cao món đồ đó, điều này có thể biến việc mua sắm quà tặng thành một nỗ lực khá căng thẳng.",
+      vocab: [
+        { en: "ideal present", ipa: "/aɪˈdiː.əl ˈprez.ənt/", vn: "món quà lý tưởng" },
+        { en: "second-guessing yourself", ipa: "/ˌsek.ənd ˈɡes.ɪŋ jorˈself/", vn: "tự hoài nghi / lăn tăn lựa chọn của chính mình" },
+        { en: "stressful endeavor", ipa: "/ˈstres.fəl ɪnˈdev.ɚ/", vn: "nỗ lực đầy căng thẳng" }
+      ]
+    },
+    {
+      q: "Will people feel happy when receiving an expensive gift?",
+      sample: "Naturally, most individuals would feel thrilled or flattered to receive a costly present because luxury items carry a strong status symbol and tactile appeal. However, happiness isn't solely dependent on a price tag. If an expensive gift feels inappropriate or imposes an <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">emotional obligation</mark> to return the favor, it can cause discomfort. Ultimately, true happiness usually stems from the <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">thoughtfulness behind the gesture</mark> rather than its monetary value.",
+      trans: "Đương nhiên, hầu hết các cá nhân sẽ cảm thấy thích thú hoặc hãnh diện khi nhận được một món quà đắt tiền vì các mặt hàng xa xỉ mang biểu tượng trạng thái mạnh mẽ và sức hấp dẫn xúc giác. Tuy nhiên, hạnh phúc không chỉ phụ thuộc vào một thẻ giá. Nếu một món quà đắt tiền cảm thấy không phù hợp hoặc áp đặt nghĩa vụ cảm xúc phải trả ơn, nó có thể gây ra sự khó chịu. Cuối cùng, hạnh phúc thực sự thường bắt nguồn từ sự chu đáo đằng sau hành động đó hơn là giá trị tiền bạc của nó.",
+      vocab: [
+        { en: "emotional obligation", ipa: "/ɪˈmoʊ.ʃən.əl ˌɑː.bləˈɡeɪ.shən/", vn: "nghĩa vụ / áp lực về mặt cảm xúc" },
+        { en: "thoughtfulness behind the gesture", ipa: "/ˈθɔːt.fəl.nəs bɪˈhaɪnd ðə ˈdʒes.tʃɚ/", vn: "sự chu đáo ẩn sau hành động" }
+      ]
+    },
+    {
+      q: "Which do people give on traditional festivals, red envelopes or other kinds of gifts?",
+      sample: "During major traditional festivals in Vietnam, such as Tet, both red envelopes and physical gifts play vital yet distinct roles. Red envelopes containing lucky money are traditionally given to children and elders to <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">convey wishes of prosperity and health</mark>. Meanwhile, wrapped gifts—like specialty foods, fine tea, or decorative items—are typically exchanged among friends, colleagues, and relatives to <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">strengthen interpersonal connections</mark>.",
+      trans: "Trong các lễ hội truyền thống lớn ở Việt Nam, chẳng hạn như Tết, cả phong bao lì xì và quà tặng vật chất đều đóng vai trò quan trọng nhưng riêng biệt. Bao lì xì chứa tiền may mắn theo truyền thống được trao cho trẻ em và người cao tuổi để truyền tải những lời chúc thịnh vượng và sức khỏe. Trong khi đó, quà được gói — như thực phẩm đặc sản, trà ngon hoặc các món đồ trang trí — thường được trao đổi giữa bạn bè, đồng nghiệp và họ hàng để củng cố các mối quan hệ xã hội.",
+      vocab: [
+        { en: "convey wishes of prosperity and health", ipa: "/kənˈveɪ ˈwɪʃ.ɪz əv prɑːˈsper.ə.ti ænd helθ/", vn: "truyền tải lời chúc thịnh vượng và sức khỏe" },
+        { en: "strengthen interpersonal connections", ipa: "/ˈstreŋ.θən ˌɪn.t̬ɚˈpɝː.sən.əl kəˈnek.ʃənz/", vn: "củng cố các mối liên kết cá nhân" }
+      ]
+    },
+    {
+      q: "What do people usually consider when buying gifts?",
+      sample: "When selecting a present, people typically weigh several key factors. First and foremost, they consider the recipient's age, gender, and personal interests to ensure the item is relevant and useful. Another crucial factor is their budget, as people want to find something nice without <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">stretching their financial limits</mark>. Finally, the cultural context or appropriateness of the gift for a specific occasion also heavily influences their final decision.",
+      trans: "Khi lựa chọn món quà, mọi người thường cân nhắc một số yếu tố quan trọng. Trước hết và trên hết, họ xem xét độ tuổi, giới tính và sở thích cá nhân của người nhận để đảm bảo món đồ đó phù hợp và hữu ích. Một yếu tố quan trọng khác là ngân sách của họ, vì mọi người muốn tìm thứ gì đó đẹp mà không làm căng thẳng giới hạn tài chính của họ. Cuối cùng, bối cảnh văn hóa hoặc sự phù hợp của món quà cho một dịp cụ thể cũng ảnh hưởng lớn đến quyết định cuối cùng của họ.",
+      vocab: [
+        { en: "stretching their financial limits", ipa: "/ˈstretʃ.ɪŋ ðer fəˈnæn.ʃəl ˈlɪm.ɪts/", vn: "vượt quá giới hạn tài chính cá nhân" }
+      ]
+    },
+    {
+      q: "Are there any unlucky things that people should not buy as gifts in your country?",
+      sample: "Yes, in Vietnamese culture, certain items are traditionally considered taboo or associated with bad luck. For instance, giving sharp objects like knives or scissors is avoided because it <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">symbolizes cutting off relationships</mark> or bringing bad fortune. Similarly, presenting handkerchiefs is discouraged as they are traditionally linked to crying and sorrow, while clocks or watches are sometimes avoided because they can signify <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">the passage of time and mortality</mark>.",
+      trans: "Vâng, trong văn hóa Việt Nam, một số món đồ theo truyền thống được coi là điều cấm kỵ hoặc liên quan đến vận rủi. Ví dụ, việc tặng các vật sắc nhọn như dao hoặc kéo bị tránh vì nó tượng trưng cho việc cắt đứt các mối quan hệ hoặc mang lại vận may xấu. Tương tự như vậy, việc tặng khăn tay không được khuyến khích vì chúng theo truyền thống gắn liền với tiếng khóc và nỗi buồn, trong khi đồng hồ đôi khi bị tránh vì chúng có thể biểu thị sự trôi qua của thời gian và sự diệt vong.",
+      vocab: [
+        { en: "symbolizes cutting off relationships", ipa: "/ˈsɪm.bə.laɪz ˈkʌt.ɪŋ ɔːf rɪˈleɪ.ʃən.ʃɪps/", vn: "tượng trưng cho việc cắt đứt các mối quan hệ" },
+        { en: "the passage of time and mortality", ipa: "/ðə ˈpæs.ɪdʒ əv taɪm ænd mɔːrˈtæl.ə.ti/", vn: "sự trôi đi của thời gian và sự tử vong / hữu hạn" }
+      ]
+    }
+  ],
+
+
+// 6: Describe a book you read that made you happy & Part 3
+  6: [
+    {
+      q: "Describe a book you read that made you happy",
+      sample: "Well, today I'm gonna talk about an <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">uplifting contemporary novel</mark> I read a few months ago that brought an immense sense of joy to my daily routine. To give you some basic information, it is a heartwarming fiction book that follows the journey of a disillusioned man who rediscovers his childhood passions through a series of whimsical adventures. \n\nI still remember the time—it was during a particularly stressful period when I was overwhelmed by heavy curriculum deadlines, and I picked up this book hoping for a <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">mental escape</mark>. I spent my weekend curled up on the sofa, devouring its pages chapter by chapter. \n\nI read it because a close friend highly recommended it for its witty humor and <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">profound life lessons</mark>. It made me happy because its optimistic philosophy gently reminded me to appreciate the <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">simple pleasures of everyday life</mark> rather than constantly chasing perfection. \n\nAt first, I thought it would just be another cliché story, but its <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">witty narrative style</mark> completely captivated me. Looking to the future, if I ever feel burnt out again, this is definitely the book I'll turn to for <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">emotional rejuvenation</mark>. Well, I guess that's all about this wonderful read.",
+      trans: "Vâng, hôm nay tôi sẽ nói về một tiểu thuyết đương đại đầy phấn khởi mà tôi đã đọc vài tháng trước, mang lại niềm vui lớn cho thói quen hàng ngày của tôi. Cung cấp một số thông tin cơ bản, đó là một cuốn tiểu thuyết ấm áp theo chân hành trình của một người đàn ông vỡ mộng khám phá lại niềm đam mê thời thơ ấu của mình thông qua một chuỗi các cuộc phiêu lưu kỳ lạ.\n\nTôi vẫn nhớ thời điểm đó — đó là trong một giai đoạn đặc biệt căng thẳng khi tôi bị ngợp bởi các thời hạn giáo án nặng nề, và tôi đã nhặt cuốn sách này lên với hy vọng tìm kiếm một lối thoát tinh thần. Tôi đã dành trọn cuối tuần cuộn mình trên ghế sofa, ngấu nghiến từng trang sách qua từng chương.\n\nTôi đọc nó vì một người bạn thân đã giới thiệu rất nhiều về sự hài hước hóm hỉnh và những bài học cuộc sống sâu sắc của nó. Nó làm tôi hạnh phúc vì triết lý lạc quan của nó nhẹ nhàng nhắc nhở tôi trân trọng những niềm vui giản dị của cuộc sống hàng ngày thay vì liên tục theo đuổi sự hoàn hảo.\n\nLúc đầu, tôi nghĩ rằng nó chỉ là một câu chuyện sáo rỗng khác, nhưng phong cách tự sự hóm hỉnh của nó đã hoàn toàn thu hút tôi. Nhìn về tương lai, nếu tôi có cảm giác kiệt sức một lần nữa, đây chắc chắn là cuốn sách tôi sẽ tìm đến để phục hồi năng lượng cảm xúc. Chà, tôi đoán đó là tất cả về cuốn sách tuyệt vời này.",
+      vocab: [
+        { en: "uplifting contemporary novel", ipa: "/ʌpˈlɪf.tɪŋ kənˈtem.pə.rer.i ˈnɑː.vəl/", vn: "tiểu thuyết đương đại đầy phấn khởi / tích cực" },
+        { en: "mental escape", ipa: "/ˈmen.təl ɪˈskeɪp/", vn: "sự giải thoát / thư giãn tinh thần" },
+        { en: "profound life lessons", ipa: "/prəˈfaʊnd laɪf ˈles.ənz/", vn: "những bài học cuộc sống sâu sắc" },
+        { en: "simple pleasures of everyday life", ipa: "/ˈsɪm.pəl ˈpleʒ.ɚz əv ˈev.ri.deɪ laɪf/", vn: "những niềm vui giản dị của đời sống hàng ngày" },
+        { en: "witty narrative style", ipa: "/ˈwɪt.i ˈner.ə.t̬ɪv staɪl/", vn: "phong cách kể chuyện hóm hỉnh" },
+        { en: "emotional rejuvenation", ipa: "/ɪˈmoʊ.ʃən.əl riːˌdʒuː.vəˈneɪ.shən/", vn: "sự phục hồi năng lượng cảm xúc" }
+      ]
+    },
+    {
+      q: "What kinds of books are popular in Vietnam?",
+      sample: "In Vietnam, reading preferences vary quite a bit across different age groups. Among young adults and students, <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">self-help books</mark> and translated foreign fiction—especially romance novels and light novels—tend to dominate the market. Meanwhile, middle-aged readers and seniors often gravitate toward historical memoirs, books on traditional philosophy, and health-related publications. Additionally, professional development and business management titles remain consistently <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">in high demand</mark> among ambitious working professionals.",
+      trans: "Ở Việt Nam, sở thích đọc sách thay đổi khá nhiều ở các nhóm tuổi khác nhau. Trong giới trẻ và học sinh, sách tự giúp bản thân (self-help) và tiểu thuyết nước ngoài được dịch — đặc biệt là tiểu thuyết ngôn tình và tiểu thuyết nhẹ — có xu hướng thống trị thị trường. Trong khi đó, độc giả trung niên và cao tuổi thường hướng về hồi ký lịch sử, sách về triết học truyền thống và các ấn phẩm liên quan đến sức khỏe. Ngoài ra, các tựa sách phát triển chuyên môn và quản trị kinh doanh vẫn duy trì mức độ nhu cầu cao ổn định trong cộng đồng các chuyên gia đi làm đầy tham vọng.",
+      vocab: [
+        { en: "self-help books", ipa: "/self help bʊks/", vn: "sách tự hoàn thiện bản thân / self-help" },
+        { en: "in high demand", ipa: "/ɪn haɪ dɪˈmænd/", vn: "có nhu cầu cao / được săn đón" }
+      ]
+    },
+    {
+      q: "Do you think people should read the original book before watching the movie?",
+      sample: "From my perspective, reading the book first is generally a much more rewarding experience. Books offer <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">unfiltered access to the characters' inner thoughts</mark> and intricate world-building details that film adaptations often have to cut due to time constraints. If you watch the movie first, your imagination becomes constrained by the director's visual choices, whereas reading the book allows you to <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">construct your own mental imagery</mark> first.",
+      trans: "Từ góc độ của tôi, việc đọc sách trước nhìn chung là một trải nghiệm đáng giá hơn nhiều. Sách cung cấp khả năng tiếp cận không qua lọc đến những suy nghĩ bên trong của nhân vật và các chi tiết xây dựng thế giới phức tạp mà các bộ phim chuyển thể thường phải cắt bỏ do giới hạn thời gian. Nếu bạn xem phim trước, trí tưởng tượng của bạn sẽ bị giới hạn bởi các lựa chọn trực quan của đạo diễn, trong khi việc đọc sách cho phép bạn tự xây dựng hình ảnh trong tâm trí trước.",
+      vocab: [
+        { en: "unfiltered access to the characters' inner thoughts", ipa: "/ʌnˈfɪl.tɚ.dɪd ˈæk.ses tuː ðə ˈkær.ɪk.tɚz ˈɪn.ɚ θɔːts/", vn: "khả năng tiếp cận không qua bộ lọc tới nội tâm nhân vật" },
+        { en: "construct your own mental imagery", ipa: "/kənˈstrʌkt jor oʊn ˈmen.təl ˈɪm.ɪdʒ.ri/", vn: "tự xây dựng hình ảnh trong tâm trí" }
+      ]
+    },
+    {
+      q: "Are success books useful to everyone?",
+      sample: "Not necessarily. While self-help and motivational books can provide a <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">valuable burst of inspiration</mark> and practical productivity frameworks, their usefulness depends heavily on the reader's mindset and life stage. Many of these books promote a <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">one-size-fits-all approach</mark> that may not apply to everyone's unique circumstances. Without critical thinking and real-world application, reading them excessively can sometimes <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">yield diminishing returns</mark> rather than actual progress.",
+      trans: "Không hẳn như vậy. Mặc dù sách tự giúp bản thân và truyền động lực có thể cung cấp một nguồn cảm hứng quý giá và các khuôn khổ năng suất thực tế, nhưng tính hữu ích của chúng phụ thuộc rất nhiều vào tư duy và giai đoạn cuộc sống của người đọc. Nhiều cuốn sách trong số này quảng bá một cách tiếp cận cào bằng (một cỡ cho tất cả) có thể không áp dụng được cho hoàn cảnh độc đáo của mọi người. Nếu không có tư duy phản biện và ứng dụng thực tế, việc đọc chúng quá mức đôi khi có thể mang lại hiệu quả giảm dần thay vì tiến bộ thực sự.",
+      vocab: [
+        { en: "valuable burst of inspiration", ipa: "/ˈvæl.jə.bəl bɝːst əv ˌɪn.spəˈreɪ.ʃən/", vn: "luồng cảm hứng quý giá bùng nổ" },
+        { en: "one-size-fits-all approach", ipa: "/wʌn saɪz fɪts ɔːl əˈproʊtʃ/", vn: "phương pháp áp dụng chung cho mọi trường hợp" },
+        { en: "yield diminishing returns", ipa: "/jiːld dɪˈmɪn.ɪʃ.ɪŋ rɪˈtɝːnz/", vn: "mang lại hiệu quả giảm dần / ít tác dụng hơn" }
+      ]
+    }
+  ],
+
+// 7: Describe a person whose health and fitness you have helped to improve & Part 3
+  7: [
+    {
+      q: "Describe a person whose health and fitness you have helped to improve",
+      sample: "Well, today I'm gonna talk about an experience where I successfully assisted my younger brother in significantly improving his <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">overall health and physical fitness</mark>. To give you some basic information, he is a university student who used to live a <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">sedentary lifestyle</mark>, spending most of his time glued to his computer screen studying or gaming. \n\nI decided to step in and help him about a year ago when I noticed he was <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">experiencing severe chronic fatigue</mark> and gaining unhealthy weight due to a lack of physical activity. To implement this transformation, I designed a structured home workout routine focusing on core strength and cardio, while also guiding him on how to <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">adopt balanced nutritional habits</mark>. We committed to exercising together every morning before his classes.\n\nAt first, the process was remarkably difficult because he lacked basic <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">stamina and self-discipline</mark>, frequently trying to skip workouts or give up halfway. However, by gradually increasing the intensity and encouraging him every step of the way, he eventually built up his endurance and fell in love with fitness. Looking to the future, if we hadn't made that change, his physical well-being would have deteriorated even further. Well, I guess that's all about how I helped him transform his lifestyle.",
+      trans: "Vâng, hôm nay tôi sẽ nói về một trải nghiệm mà tôi đã hỗ trợ thành công em trai mình cải thiện đáng kể sức khỏe tổng thể và thể lực. Cung cấp một số thông tin cơ bản, nó là một sinh viên đại học từng sống theo lối sống ít vận động, dành phần lớn thời gian dán mắt vào màn hình máy tính để học tập hoặc chơi game.\n\nTôi quyết định can thiệp và giúp đỡ cậu ấy khoảng một năm trước khi nhận thấy cậu ấy đang trải qua tình trạng mệt mỏi mãn tính nghiêm trọng và tăng cân không lành mạnh do thiếu hoạt động thể chất. Để thực hiện sự chuyển đổi này, tôi đã thiết kế một bài tập luyện tại nhà có cấu trúc tập trung vào sức mạnh cốt lõi và tim mạch, đồng thời hướng dẫn cậu ấy cách áp dụng các thói quen dinh dưỡng cân bằng. Chúng tôi cam kết tập luyện cùng nhau mỗi buổi sáng trước giờ học.\n\nLúc đầu, quá trình này vô cùng khó khăn vì cậu ấy thiếu sức bền và kỷ luật tự giác cơ bản, thường xuyên cố gắng trốn tập hoặc bỏ cuộc nửa chừng. Tuy nhiên, bằng cách tăng dần cường độ và khuyến khích cậu ấy trong từng bước đi, cậu ấy cuối cùng đã xây dựng được sức bền và đem lòng yêu thích thể hình. Nhìn về tương lai, nếu chúng tôi không thực hiện sự thay đổi đó, sức khỏe thể chất của cậu ấy sẽ còn suy giảm tồi tệ hơn nữa. Chà, tôi đoán đó là tất cả về cách tôi giúp cậu ấy thay đổi lối sống.",
+      vocab: [
+        { en: "overall health and physical fitness", ipa: "/ˌoʊ.vɚˈrɔːl helθ ænd ˈfɪz.ɪ.kəl ˈfɪt.nəs/", vn: "sức khỏe tổng thể và thể lực" },
+        { en: "sedentary lifestyle", ipa: "/ˈsed.ən.ter.i ˈlaɪf.staɪl/", vn: "lối sống ít vận động" },
+        { en: "experiencing severe chronic fatigue", ipa: "/ɪkˈspɪr.i.ə.sɪŋ sɪˈvɪr ˈkrɑː.nɪk fəˈtiːɡ/", vn: "trải qua tình trạng mệt mỏi mãn tính nghiêm trọng" },
+        { en: "adopt balanced nutritional habits", ipa: "/əˈdɑːpt ˈbæl.ən.tst nuːˈtrɪʃ.ən.əl ˈhæb.ɪts/", vn: "áp dụng các thói quen dinh dưỡng cân bằng" },
+        { en: "stamina and self-discipline", ipa: "/ˈstæm.ə.nə ænd ˌself ˈdɪs.ə.plɪn/", vn: "sức bền và tính kỷ luật tự giác" }
+      ]
+    },
+    {
+      q: "Which group pays more attention to health, young people or old people?",
+      sample: "From my perspective, both age groups pay attention to health, but they approach it from completely different angles. Elderly people naturally prioritize health because their bodies are more vulnerable, prompting them to monitor their diets strictly, exercise gently, and visit doctors regularly for check-ups. On the other hand, younger generations are becoming increasingly health-conscious, often investing in gym memberships, organic foods, and wellness apps. However, young people sometimes tend to <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">compromise their well-being</mark> due to <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">hectic work schedules and sleep deprivation</mark>, whereas seniors are generally much more consistent.",
+      trans: "Từ góc độ của tôi, cả hai nhóm tuổi đều chú ý đến sức khỏe, nhưng họ tiếp cận vấn đề từ các góc độ hoàn toàn khác nhau. Người cao tuổi tự nhiên ưu tiên sức khỏe vì cơ thể họ dễ bị tổn thương hơn, thúc đẩy họ theo dõi chế độ ăn uống nghiêm ngặt, tập thể dục nhẹ nhàng và đến gặp bác sĩ thường xuyên để kiểm tra. Mặt khác, các thế hệ trẻ ngày càng ý thức hơn về sức khỏe, thường đầu tư vào thẻ tập gym, thực phẩm hữu cơ và ứng dụng chăm sóc sức khỏe. Tuy nhiên, giới trẻ đôi khi có xu hướng thỏa hiệp với sức khỏe của họ do lịch trình công việc bận rộn và thiếu ngủ, trong khi người cao tuổi thường kiên định hơn nhiều.",
+      vocab: [
+        { en: "compromise their well-being", ipa: "/ˈkɑːm.prə.maɪz ðer ˈwelˌbiː.ɪŋ/", vn: "làm tổn hại đến sức khỏe / sự thoải mái của bản thân" },
+        { en: "hectic work schedules and sleep deprivation", ipa: "/ˈhek.tɪk wɝːk ˈskedʒ.uːlz ænd sliːp ˌdep.rəˈveɪ.shən/", vn: "lịch trình làm việc bận rộn và tình trạng thiếu ngủ" }
+      ]
+    },
+    {
+      q: "What effect does stress have on health?",
+      sample: "Stress exerts a profoundly <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">detrimental impact on both physical and mental health</mark>. When an individual is subjected to prolonged psychological pressure, their body releases high levels of cortisol, which can <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">weaken the immune system</mark>, elevate blood pressure, and trigger severe digestive issues. Mentally, chronic stress often leads to anxiety, <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">cognitive burnout</mark>, and clinical depression. Therefore, managing stress effectively is an absolute necessity for maintaining a <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">long-term healthy lifestyle</mark>.",
+      trans: "Căng thẳng gây ra tác động có hại sâu sắc đến cả sức khỏe thể chất và tinh thần. Khi một cá nhân chịu áp lực tâm lý kéo dài, cơ thể họ giải phóng lượng lớn cortisol, có thể làm suy yếu hệ thống miễn dịch, làm tăng huyết áp và gây ra các vấn đề về tiêu hóa nghiêm trọng. Về mặt tinh thần, căng thẳng mãn tính thường dẫn đến lo âu, kiệt quệ nhận thức và trầm cảm lâm sàng. Do đó, việc quản lý căng thẳng hiệu quả là một nhu cầu thiết yếu tuyệt đối để duy trì lối sống lành mạnh lâu dài.",
+      vocab: [
+        { en: "detrimental impact on both physical and mental health", ipa: "/ˌdet.rəˈmen.təl ˈɪm.pækt ɑːn boʊθ ˈfɪz.ɪ.kəl ænd ˈmen.təl helθ/", vn: "tác động có hại đến cả sức khỏe thể chất và tinh thần" },
+        { en: "weaken the immune system", ipa: "/ˈwiː.kən ðə ɪˈmyuːn ˈsɪs.təm/", vn: "làm suy yếu hệ thống miễn dịch" },
+        { en: "cognitive burnout", ipa: "/ˈkɑːɡ.nə.t̬ɪv ˈbɝː.naʊt/", vn: "kiệt quệ năng lực nhận thức / tinh thần" },
+        { en: "long-term healthy lifestyle", ipa: "/lɔːŋ tɝːm ˈhel.θi ˈlaɪf.staɪl/", vn: "lối sống lành mạnh lâu dài" }
+      ]
+    }
+  ],
+
+
+// 8: Describe somewhere near a natural place that you have been to & Part 3
+  8: [
+    {
+      q: "Describe somewhere near a natural place that you have been to",
+      sample: "Well, today I'm gonna talk about a serene and breathtaking valley nestled near the Bach Ma National Park, located just a short drive from Da Nang. To give you some basic information, it is an unspoiled eco-spot surrounded by <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">majestic mountain ranges</mark> and crystal-clear streams. \n\nI went there with a small group of close friends and fellow educators during our summer break. We decided to take this trip because we wanted to <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">escape from the relentless hustle and bustle</mark> of city life and find a quiet place to unwind after a heavy teaching semester. \n\nDuring our stay, we set up camp near a cascading waterfall, went trekking through the dense forest trails, and enjoyed deep conversations under the starry night sky. This place made me feel an incredible <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">sense of inner peace and rejuvenation</mark>. Being completely immersed in such a <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">pristine natural environment</mark> allowed me to clear my mind and recharge my emotional batteries. \n\nAt first, I was slightly concerned about the lack of modern conveniences, but that rustic experience turned out to be the highlight of my year. Looking to the future, whenever I feel burnt out by my schedule, this tranquil valley will definitely be my <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">go-to sanctuary</mark>. Well, I guess that's all about this wonderful natural retreat.",
+      trans: "Vâng, hôm nay tôi sẽ nói về một thung lũng thanh bình và ngoạn mục nằm gần Vườn quốc gia Bạch Mã, cách Đà Nẵng một quãng lái xe ngắn. Cung cấp một số thông tin cơ bản, đó là một điểm sinh thái nguyên sơ được bao quanh bởi các dãy núi hùng vĩ và những dòng suối trong vắt.\n\nTôi đã đến đó với một nhóm nhỏ bạn bè thân thiết và các đồng nghiệp giáo dục trong kỳ nghỉ hè của chúng tôi. Chúng tôi quyết định thực hiện chuyến đi này vì muốn trốn khỏi sự hối hả và nhộn nhịp không ngừng của cuộc sống thành phố và tìm một nơi yên tĩnh để thư giãn sau một học kỳ giảng dạy nặng nhọc.\n\nTrong thời gian lưu trú, chúng tôi dựng lều gần một thác nước chảy róc rách, đi trekking qua những con đường mòn trong rừng rậm và tận hưởng những cuộc trò chuyện sâu sắc dưới bầu trời đêm đầy sao. Nơi này mang lại cho tôi cảm giác bình yên nội tại và sự phục hồi năng lượng tuyệt vời. Việc hòa mình hoàn toàn vào một môi trường tự nhiên nguyên sơ như vậy cho phép tôi làm sạch tâm trí và nạp lại năng lượng cảm xúc.\n\nLúc đầu, tôi hơi lo lắng về việc thiếu các tiện nghi hiện đại, nhưng trải nghiệm mộc mạc đó hóa ra lại là điểm nhấn trong năm của tôi. Nhìn về tương lai, bất cứ khi nào tôi cảm thấy kiệt sức vì lịch trình của mình, thung lũng thanh bình này chắc chắn sẽ là chốn bình yên quen thuộc của tôi. Chà, tôi đoán đó là tất cả về kỳ nghỉ dưỡng tự nhiên tuyệt vời này.",
+      vocab: [
+        { en: "majestic mountain ranges", ipa: "/məˈdʒes.tɪk ˈmaʊn.tɪn ˈreɪn.dʒɪz/", vn: "các dãy núi hùng vĩ" },
+        { en: "escape from the relentless hustle and bustle", ipa: "/ɪˈskeɪp frəm ðə rɪˈlen.t.ləs ˈhʌs.əl ænd ˈbʌs.əl/", vn: "trốn khỏi sự hối hả và nhộn nhịp không ngừng" },
+        { en: "sense of inner peace and rejuvenation", ipa: "/sens əv ˈɪn.ɚ piːs ænd riːˌdʒuː.vəˈneɪ.shən/", vn: "cảm giác bình yên nội tại và sự phục hồi năng lượng" },
+        { en: "pristine natural environment", ipa: "/ˈprɪs.tiːn ˈnætʃ.ɚ.əl ɪnˈvaɪ.rən.mənt/", vn: "môi trường tự nhiên nguyên sơ" },
+        { en: "go-to sanctuary", ipa: "/ˈɡoʊ.tuː ˈsæŋktʃuˌer.i/", vn: "nơi chốn lui tới an toàn / bình yên quen thuộc" }
+      ]
+    },
+    {
+      q: "Are there any natural attractions that are great to visit?",
+      sample: "Yes, absolutely. There are numerous breathtaking natural wonders across the globe that offer <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">immense recreational and aesthetic value</mark>. National parks featuring majestic mountain ranges, serene coastal beaches, and ancient rainforests are particularly fantastic to visit. These destinations allow travelers to <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">disconnect from urban stressors</mark>, engage in outdoor activities like hiking or wildlife watching, and develop a deeper appreciation for Earth's biodiversity.",
+      trans: "Vâng, chắc chắn rồi. Có rất nhiều kỳ quan thiên nhiên ngoạn mục trên khắp thế giới mang lại giá trị giải trí và thẩm mỹ to lớn. Các vườn quốc gia có các dãy núi hùng vĩ, những bãi biển ven biển thanh bình và những khu rừng mưa cổ kính đặc biệt tuyệt vời để ghé thăm. Những điểm đến này cho phép du khách ngắt kết nối khỏi những áp lực đô thị, tham gia các hoạt động ngoài trời như đi bộ đường dài hoặc ngắm động vật hoang dã, và phát triển sự trân trọng sâu sắc hơn đối với đa dạng sinh học của Trái Đất.",
+      vocab: [
+        { en: "immense recreational and aesthetic value", ipa: "/ɪˈmens ˌrek.riˈeɪ.shən.əl ænd esˈθet.ɪk ˈvæl.juː/", vn: "giá trị giải trí và thẩm mỹ to lớn" },
+        { en: "disconnect from urban stressors", ipa: "/ˌdɪs.kəˈnekt frəm ˈɜːr.bən ˈstres.ɚz/", vn: "ngắt kết nối khỏi những tác nhân gây căng thẳng đô thị" }
+      ]
+    },
+    {
+      q: "Do you think it is necessary to include natural spaces in a city?",
+      sample: "From my perspective, integrating green spaces into urban planning is an absolute necessity rather than a luxury. Parks, tree-lined avenues, and botanical gardens play a <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">pivotal role in mitigating urban heat</mark>, filtering polluted air, and lowering noise levels. Moreover, having accessible natural spots provides city dwellers with essential venues for physical exercise and <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">psychological recovery</mark>, significantly enhancing their overall quality of life.",
+      trans: "Từ góc độ của tôi, việc tích hợp không gian xanh vào quy hoạch đô thị là một nhu cầu thiết yếu tuyệt đối chứ không phải là một xa xỉ phẩm. Các công viên, đại lộ rợp bóng cây và vườn bách thảo đóng vai trò nòng cốt trong việc giảm thiểu sức nóng đô thị, lọc không khí ô nhiễm và hạ thấp mức độ tiếng ồn. Hơn nữa, việc có các điểm tự nhiên dễ tiếp cận cung cấp cho cư dân thành phố các địa điểm thiết yếu để tập thể dục và phục hồi tâm lý, cải thiện đáng kể chất lượng cuộc sống tổng thể của họ.",
+      vocab: [
+        { en: "pivotal role in mitigating urban heat", ipa: "/ˈpɪv.ə.təl roʊl ɪn ˈmɪt.ə.ɡeɪ.tɪŋ ˈɜːr.bən hiːt/", vn: "vai trò nòng cốt trong việc giảm thiểu sức nóng đô thị" },
+        { en: "psychological recovery", ipa: "/ˌsaɪ.kəˈlɑːdʒ.ɪ.kəl rɪˈkʌv.ər.i/", vn: "sự phục hồi tâm lý / tinh thần" }
+      ]
+    },
+    {
+      q: "Do you think people who live in natural places are more likely to protect it?",
+      sample: "That is quite likely, though it can depend on circumstances. Individuals residing close to nature often develop a <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">profound emotional attachment</mark> to their local environment because their livelihoods, well-being, and daily tranquility are directly tied to it. Consequently, they tend to be fierce advocates for conservation. However, in some cases, impoverished rural communities might engage in <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">unsustainable exploitation of natural resources</mark> simply out of economic desperation, which highlights that environmental protection requires both awareness and proper socioeconomic support.",
+      trans: "Điều đó rất có khả năng xảy ra, mặc dù nó có thể phụ thuộc vào hoàn cảnh. Các cá nhân cư trú gần gũi với thiên nhiên thường phát triển sự gắn bó cảm xúc sâu sắc với môi trường địa phương của họ vì sinh kế, sựnhanh chóng và sự yên bình hàng ngày của họ gắn liền trực tiếp với nó. Do đó, họ có xu hướng trở thành những người ủng hộ mạnh mẽ cho việc bảo tồn. Tuy nhiên, trong một số trường hợp, các cộng đồng nông thôn nghèo khó có thể tham gia vào việc khai thác tài nguyên thiên nhiên không bền vững đơn giản vì sự tuyệt vọng về kinh tế, điều này làm nổi bật rằng bảo vệ môi trường đòi hỏi cả nhận thức và hỗ trợ kinh tế xã hội thích hợp.",
+      vocab: [
+        { en: "profound emotional attachment", ipa: "/prəˈfaʊnd ɪˈmoʊ.ʃən.əl əˈtætʃ.mənt/", vn: "sự gắn bó cảm xúc sâu sắc" },
+        { en: "unsustainable exploitation of natural resources", ipa: "/ˌʌn.səˈsteɪ.nə.bəl ˌek.splɔɪˈteɪ.ʃən əv ˈnætʃ.ɚ.əl ˈriː.sɔːrs.ɪz/", vn: "khai thác tài nguyên thiên nhiên không bền vững" }
+      ]
+    }
+  ],
+
+// 9: Describe your least favourite movie & Part 3
+  9: [
+    {
+      q: "Describe your least favourite movie",
+      sample: "Well, today I'm gonna talk about a film that completely disappointed me, which is a poorly produced sci-fi action movie I watched a few months ago. To give you some basic information, the plot revolved around a group of astronauts battling bizarre alien creatures in outer space.\n\nI watched it on a lazy Sunday evening at home on my laptop while trying to unwind after a hectic week of grading student papers. A friend had recommended it, so I had rather high expectations.\n\nIt is my least favourite movie because the storyline was utterly <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">nonsensical</mark> and full of <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">plot holes</mark>. Furthermore, the <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">special effects</mark> looked extremely fake, and the dialogue felt completely <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">cliché</mark>. \n\nAt first, I tried to stay patient and watch it till the end, but the <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">pacing</mark> was so slow that I eventually felt completely <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">bored</mark>. Looking to the future, I will definitely check reviews more carefully before wasting my time on such a <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">dreadful</mark> film. Well, I guess that's all about my worst cinematic experience.",
+      trans: "Vâng, hôm nay tôi sẽ nói về một bộ phim hoàn toàn làm tôi thất vọng, đó là một bộ phim hành động khoa học viễn tưởng được sản xuất kém mà tôi đã xem cách đây vài tháng. Cung cấp một số thông tin cơ bản, cốt truyện xoay quanh một nhóm các nhà du hành vũ trụ chiến đấu với các sinh vật ngoài hành tinh kỳ lạ ngoài không gian.\n\nTôi đã xem nó vào một buổi tối Chủ Nhật lười biếng ở nhà trên máy tính xách tay của mình trong khi cố gắng thư giãn sau một tuần bận rộn chấm bài của học sinh. Một người bạn đã giới thiệu nó, vì vậy tôi đã có kỳ vọng khá cao.\n\nĐó là bộ phim kém yêu thích nhất của tôi vì cốt truyện hoàn toàn vô lý và đầy những lỗ hổng cốt truyện. Hơn nữa, các hiệu ứng đặc biệt trông vô cùng giả tạo, và các đoạn hội thoại mang lại cảm giác hoàn toàn sáo rỗng.\n\nLúc đầu, tôi đã cố gắng kiên nhẫn xem nó cho đến cuối cùng, nhưng nhịp độ quá chậm đến mức cuối cùng tôi cảm thấy vô cùng chán nản. Nhìn về tương lai, tôi chắc chắn sẽ kiểm tra đánh giá cẩn thận hơn trước khi lãng phí thời gian vào một bộ phim tồi tệ như vậy. Chà, tôi đoán đó là tất cả về trải nghiệm điện ảnh tồi tệ nhất của tôi.",
+      vocab: [
+        { en: "nonsensical", ipa: "/nɑːnˈsen.sɪ.kəl/", vn: "vô lý / không có nghĩa" },
+        { en: "plot holes", ipa: "/plɑːt hoʊlz/", vn: "lỗ hổng cốt truyện" },
+        { en: "special effects", ipa: "/ˈspeʃ.əl ɪˈfekts/", vn: "hiệu ứng đặc biệt" },
+        { en: "cliché", ipa: "/ˈkliː.ʃeɪ/", vn: "sáo rỗng / rập khuôn" },
+        { en: "pacing", ipa: "/ˈpeɪ.sɪŋ/", vn: "nhịp độ phim" },
+        { en: "bored", ipa: "/bɔːrd/", vn: "chán nản" },
+        { en: "dreadful", ipa: "/ˈdred.fəl/", vn: "tồi tệ / khủng khiếp" }
+      ]
+    },
+    {
+      q: "What kinds of movies are the most popular in Vietnam?",
+      sample: "In Vietnam, cinematic preferences tend to lean heavily toward <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">blockbuster</mark> action movies, romantic comedies, and horror films, especially during major holiday seasons like Tet. Hollywood productions featuring high-octane stunts and famous superheroes consistently attract huge audiences, particularly among the younger generation. At the same time, domestically produced Vietnamese films focusing on family drama, regional culture, and relatable social issues have also gained <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">widespread popularity</mark> and commercial success.",
+      trans: "Ở Việt Nam, sở thích điện ảnh có xu hướng nghiêng nhiều về các bộ phim hành động bom tấn, phim hài lãng mạn và phim kinh dị, đặc biệt là trong các mùa lễ lớn như Tết. Các sản phẩm của Hollywood có các pha hành động nghẹt thở và siêu anh hùng nổi tiếng luôn thu hút lượng lớn khán giả, đặc biệt là trong thế hệ trẻ. Đồng thời, các bộ phim Việt Nam sản xuất trong nước tập trung vào kịch gia đình, văn hóa vùng miền và các vấn đề xã hội gần gũi cũng đã đạt được mức độ phổ biến rộng rãi và thành công thương mại.",
+      vocab: [
+        { en: "blockbuster", ipa: "/ˈblɑːkˌbʌs.tɚ/", vn: "phim bom tấn" },
+        { en: "widespread popularity", ipa: "/ˈwaɪd.spred ˌpɑː.pjuˈlær.ə.ti/", vn: "sự phổ biến rộng rãi" }
+      ]
+    },
+    {
+      q: "What are the differences between watching movies at home and in a cinema?",
+      sample: "Watching a movie at home versus going to a theater offers completely contrasting experiences. A cinema provides an <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">immersive audio-visual environment</mark> with a massive screen and surround sound, making it ideal for visual spectacles. Furthermore, going to the movies serves as a great social outing with friends. On the other hand, streaming films at home offers <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">unmatched convenience</mark>, allowing viewers to pause, snack freely, and enjoy total comfort without the distraction of noisy crowds.",
+      trans: "Xem phim ở nhà với việc đi rạp mang lại những trải nghiệm hoàn toàn tương phản. Rạp chiếu phim cung cấp một môi trường nghe nhìn sống động với màn hình lớn và âm thanh vòm, làm cho nó lý tưởng cho các buổi trình diễn thị giác. Hơn nữa, đi xem phim đóng vai trò như một buổi đi chơi xã hội tuyệt vời với bạn bè. Mặt khác, phát trực tuyến phim ở nhà mang lại sự tiện lợi chưa từng có, cho phép người xem tạm dừng, ăn vặt thoải mái và tận hưởng sự thoải mái hoàn toàn mà không bị phân tâm bởi đám đông ồn ào.",
+      vocab: [
+        { en: "immersive audio-visual environment", ipa: "/ɪˈmɝː.sɪv ˈɑː.di.oʊ ˈvɪʒ.u.əl ɪnˈvaɪ.rən.mənt/", vn: "môi trường nghe nhìn đắm chìm" },
+        { en: "unmatched convenience", ipa: "/ʌnˈmætʃt kənˈviːn.jəns/", vn: "sự tiện lợi không gì sánh bằng" }
+      ]
+    },
+    {
+      q: "Are movies more likely to help people become more creative than books?",
+      sample: "Both mediums stimulate creativity, but they do so in fundamentally different ways. Movies present a ready-made visual and auditory feast, which can instantly inspire artists, designers, or filmmakers with striking cinematography and storytelling techniques. However, books are generally superior for <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">fostering deep imagination</mark> because readers must actively construct characters, settings, and scenarios in their own minds. Therefore, while films offer immediate aesthetic stimulus, reading text encourages a more <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">independent and imaginative cognitive process</mark>.",
+      trans: "Cả hai phương tiện đều kích thích sự sáng tạo, nhưng chúng làm điều đó theo những cách cơ bản khác nhau. Phim ảnh trình bày một bữa tiệc thị giác và thính giác có sẵn, có thể ngay lập tức truyền cảm hứng cho các nghệ sĩ, nhà thiết kế hoặc nhà làm phim bằng kỹ thuật quay phim và kể chuyện nổi bật. Tuy nhiên, sách nhìn chung vượt trội hơn trong việc thúc đẩy trí tưởng tượng sâu sắc vì người đọc phải chủ động xây dựng nhân vật, bối cảnh và kịch bản trong tâm trí của chính họ. Do đó, trong khi các bộ phim cung cấp kích thích thẩm mỹ ngay lập tức, việc đọc văn bản khuyến khích quá trình nhận thức độc lập và giàu trí tưởng tượng hơn.",
+      vocab: [
+        { en: "fostering deep imagination", ipa: "/ˈfɑː.stɚ.ɪŋ diːp ɪˌmædʒ.əˈneɪ.shən/", vn: "nuôi dưỡng trí tưởng tượng sâu sắc" },
+        { en: "independent and imaginative cognitive process", ipa: "/ˌɪn.dɪˈpen.dunt ænd ɪˈmædʒ.ɪ.نə.t̬ɪv ˈkɑːɡ.nə.t̬ɪv ˈprɑː.ses/", vn: "quá trình nhận thức độc lập và giàu trí tưởng tượng" }
+      ]
+    },
+    {
+      q: "Can movies help people better understand the cultural background of a country?",
+      sample: "Yes, absolutely. Cinema is a powerful cultural vehicle that vividly portrays a nation's traditions, societal norms, historical struggles, and daily lifestyle. By watching foreign films, viewers can observe authentic nuances in language, body language, architecture, and cuisine that textbooks might fail to capture. It offers a <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">window into another world</mark>, fostering <mark class=\"bg-yellow-200 text-yellow-900 px-1 rounded font-bold\">cross-cultural empathy</mark> and global awareness among audiences.",
+      trans: "Vâng, chắc chắn rồi. Điện ảnh là một phương tiện văn hóa mạnh mẽ miêu tả sinh động các truyền thống, chuẩn mực xã hội, cuộc đấu tranh lịch sử và lối sống hàng ngày của một quốc gia. Bằng cách xem phim nước ngoài, người xem có thể quan sát các sắc thái chân thực trong ngôn ngữ, ngôn ngữ cơ thể, kiến trúc và ẩm thực mà sách giáo khoa có thể không nắm bắt được. Nó cung cấp một cửa sổ nhìn vào thế giới khác, thúc đẩy sự đồng cảm đa văn hóa và nhận thức toàn cầu trong khán giả.",
+      vocab: [
+        { en: "window into another world", ipa: "/ˈwɪn.doʊ ˈɪn.tə əˈnʌð.ɚ wɝːld/", vn: "cửa sổ nhìn vào một thế giới khác" },
+        { en: "cross-cultural empathy", ipa: "/krɑːs ˈkʌl.tʃɚ.əl ˈem.pə.θi/", vn: "sự thấu cảm giữa các nền văn hóa" }
+      ]
+    }
+  ],
+
+
+
+};
+
+/*************************************************************
+ * STATE MANAGEMENT
+ *************************************************************/
+let currentTopicId = 1;
+let allTopicVocab = [];
+let currentFcIndex = 0;
+let flashcardMode = "EN-VN";
+let isFlipped = false;
+
+let speakingReflectionSentences = [];
+let currentReflectionIndex = 0;
+
+/*************************************************************
+ * INITIALIZATION
+ *************************************************************/
+window.onload = function() {
+  populateTopicOptions();
+  changeTopic(1);
+};
+
+function populateTopicOptions() {
+  const select = document.getElementById("topicSelect");
+  select.innerHTML = "";
+  
+  const sortedTopics = [...topics].sort((a,b) => a.name.localeCompare(b.name));
+
+  sortedTopics.forEach(t => {
+    const opt = document.createElement("option");
+    opt.value = t.id;
+    opt.innerText = `🌾 Topic: ${t.name}`;
+    select.appendChild(opt);
+  });
+}
+
+/*************************************************************
+ * TOPIC SWITCHING & ACCORDION RENDERING
+ *************************************************************/
+function changeTopic(topicId) {
+  currentTopicId = parseInt(topicId);
+  renderQuestions();
+  aggregateTopicVocab();
+
+  currentFcIndex = 0;
+  isFlipped = false;
+  renderFlashcard();
+
+  prepareSpeakingReflection();
+}
+
+function renderQuestions() {
+  const container = document.getElementById("questionsContainer");
+  const questions = topicQuestions[currentTopicId] || [];
+  
+  document.getElementById("questionCountBadge").innerText = `${questions.length} Câu Hỏi`;
+
+  if (questions.length === 0) {
+    container.innerHTML = `
+      <div class="p-8 text-center bg-white rounded-2xl border border-gray-200 text-gray-500">
+        <i class="fa-solid fa-wheat-field-semi text-4xl mb-2 text-amber-400"></i>
+        <p>Nội dung câu hỏi cho Topic này đang được cập nhật thêm!</p>
+      </div>
+    `;
+    return;
+  }
+
+  let html = "";
+
+  questions.forEach((qObj, qIdx) => {
+    html += `
+      <div class="bg-white rounded-2xl shadow-md border-2 border-green-100 hover:border-green-300 transition overflow-hidden">
+        
+        <!-- Accordion Question Header -->
+        <button onclick="toggleQuestionBody(${qIdx})" class="w-full text-left p-4 md:p-5 flex items-center justify-between gap-3 bg-white hover:bg-green-50/50 transition cursor-pointer">
+          <div class="flex items-center gap-3">
+            <span class="bg-green-600 text-white font-bold text-xs px-2.5 py-1 rounded-lg shrink-0">
+              Q${qIdx + 1}
+            </span>
+            <h3 class="text-base md:text-lg font-bold text-gray-800">
+              ${qObj.q}
+            </h3>
+          </div>
+          <div class="flex items-center gap-2 text-green-700 shrink-0">
+            <span class="text-xs font-semibold hidden sm:inline">Bấm để xem Sample & Từ vựng</span>
+            <i id="qChevron-${qIdx}" class="fa-solid fa-chevron-down transition-transform duration-300 text-sm"></i>
+          </div>
+        </button>
+
+        <!-- Hidden Body Content (Accordion) -->
+        <div id="qBody-${qIdx}" class="hidden border-t border-green-100 p-5 md:p-6 space-y-4 bg-emerald-50/20">
+          
+          <!-- Sample Answer Box -->
+          <div class="bg-emerald-50/80 rounded-xl p-4 border-l-4 border-emerald-500 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-emerald-800 uppercase tracking-wider">
+                <i class="fa-solid fa-comment-dots mr-1"></i> Sample Answer:
+              </span>
+              <button onclick="speakText('${escapeQuotes(qObj.sample.replace(/<[^>]*>?/gm, ''))}')" class="text-emerald-700 hover:text-emerald-900 text-xs font-semibold flex items-center gap-1 bg-white px-2.5 py-1 rounded-md border border-emerald-200 shadow-sm">
+                <i class="fa-solid fa-volume-high"></i> Nghe Sample
+              </button>
+            </div>
+            <p class="text-base text-gray-800 font-medium leading-relaxed">
+              ${qObj.sample}
+            </p>
+          </div>
+
+          <!-- Translation Box -->
+          <div class="bg-amber-50/60 rounded-xl p-4 border-l-4 border-amber-400">
+            <span class="text-xs font-bold text-amber-800 uppercase tracking-wider block mb-1">
+              <i class="fa-solid fa-language mr-1"></i> Bản Dịch Tiếng Việt:
+            </span>
+            <p class="text-sm md:text-base text-gray-700 italic">
+              ${qObj.trans}
+            </p>
+          </div>
+
+          <!-- Vocabulary Highlight Section -->
+          <div class="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl p-4 border border-green-200 space-y-3">
+            <div class="flex items-center justify-between border-b border-green-200 pb-2">
+              <span class="text-xs font-bold text-green-800 uppercase tracking-wider flex items-center gap-1">
+                <i class="fa-solid fa-star text-amber-500"></i> Từ Vựng Hay Trích Từ Sample:
+              </span>
+              <button onclick="toggleAllVocabMeanings(${qIdx})" class="text-xs font-bold text-green-700 hover:text-green-900 underline">
+                Ẩn / Hiện Tất Cả Nghĩa
+              </button>
+            </div>
+
+            <!-- Vocab Rows Container -->
+            <div id="vocabList-${qIdx}" class="space-y-2">
+              ${qObj.vocab.map((v, vIdx) => `
+                <div class="flex flex-wrap items-center justify-between gap-2 p-2 rounded-lg bg-white border border-green-100 hover:bg-yellow-50 transition">
+                  <div class="flex items-center gap-3">
+                    <input type="checkbox" onchange="toggleCheckVocab(this)" class="w-4 h-4 text-green-600 rounded border-gray-300 focus:ring-green-500 cursor-pointer">
+                    <div>
+                      <span class="font-bold text-green-900 text-sm md:text-base">${v.en}</span>
+                      <span class="text-xs text-gray-500 ml-1 font-mono">${v.ipa || ''}</span>
+                    </div>
+                    <button onclick="speakText('${escapeQuotes(v.en)}')" class="text-green-600 hover:text-green-800 text-xs">
+                      <i class="fa-solid fa-volume-high"></i>
+                    </button>
+                  </div>
+
+                  <div onclick="toggleSingleMeaning(this)" class="cursor-pointer bg-green-100 hover:bg-green-200 px-3 py-1 rounded-md text-xs md:text-sm font-semibold text-green-800 transition shadow-sm">
+                    <span class="vocab-meaning">${v.vn}</span>
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    `;
+  });
+
+  container.innerHTML = html;
+}
+
+function toggleQuestionBody(qIdx) {
+  const qBody = document.getElementById(`qBody-${qIdx}`);
+  const qChevron = document.getElementById(`qChevron-${qIdx}`);
+  if (qBody.classList.contains("hidden")) {
+    qBody.classList.remove("hidden");
+    qChevron.classList.add("rotate-180");
+  } else {
+    qBody.classList.add("hidden");
+    qChevron.classList.remove("rotate-180");
+  }
+}
+
+/*************************************************************
+ * VOCABULARY UTILITIES & TOGGLES
+ *************************************************************/
+function escapeQuotes(str) {
+  return str.replace(/'/g, "\\'").replace(/"/g, '\\"');
+}
+
+function toggleSingleMeaning(el) {
+  const meaningSpan = el.querySelector('.vocab-meaning');
+  if (meaningSpan) {
+    meaningSpan.classList.toggle('hidden-meaning');
+  }
+}
+
+function toggleAllVocabMeanings(qIdx) {
+  const container = document.getElementById(`vocabList-${qIdx}`);
+  if (!container) return;
+  const spans = container.querySelectorAll('.vocab-meaning');
+  
+  const anyHidden = Array.from(spans).some(s => s.classList.contains('hidden-meaning'));
+  
+  spans.forEach(s => {
+    if (anyHidden) {
+      s.classList.remove('hidden-meaning');
+    } else {
+      s.classList.add('hidden-meaning');
+    }
+  });
+}
+
+function toggleCheckVocab(checkbox) {
+  const row = checkbox.closest('.flex');
+  if (checkbox.checked) {
+    row.classList.add('opacity-50', 'line-through');
+  } else {
+    row.classList.remove('opacity-50', 'line-through');
+  }
+}
+
+/*************************************************************
+ * FLASHCARD SYSTEM (Topic Aggregated Vocab)
+ *************************************************************/
+function aggregateTopicVocab() {
+  allTopicVocab = [];
+  const questions = topicQuestions[currentTopicId] || [];
+  questions.forEach(q => {
+    if (q.vocab && Array.isArray(q.vocab)) {
+      allTopicVocab.push(...q.vocab);
+    }
+  });
+}
+
+function setFlashcardMode(mode) {
+  flashcardMode = mode;
+  document.getElementById("modeEnVnBtn").className = mode === "EN-VN" 
+    ? "px-3 py-1.5 rounded-lg text-xs font-bold transition bg-amber-500 text-white shadow-sm"
+    : "px-3 py-1.5 rounded-lg text-xs font-bold transition text-gray-600 hover:bg-amber-100";
+
+  document.getElementById("modeVnEnBtn").className = mode === "VN-EN" 
+    ? "px-3 py-1.5 rounded-lg text-xs font-bold transition bg-amber-500 text-white shadow-sm"
+    : "px-3 py-1.5 rounded-lg text-xs font-bold transition text-gray-600 hover:bg-amber-100";
+
+  isFlipped = false;
+  renderFlashcard();
+}
+
+function renderFlashcard() {
+  const fcInner = document.getElementById("flashcardInner");
+  fcInner.classList.remove("rotate-y-180");
+  isFlipped = false;
+
+  const total = allTopicVocab.length;
+  const progressEl = document.getElementById("fcProgress");
+
+  if (total === 0) {
+    document.getElementById("fcFrontText").innerText = "Không có từ vựng";
+    document.getElementById("fcBackText").innerText = "...";
+    progressEl.innerText = "Tiến độ: 0 / 0 từ";
+    return;
+  }
+
+  if (currentFcIndex >= total) {
+    currentFcIndex = 0;
+  }
+
+  const item = allTopicVocab[currentFcIndex];
+  progressEl.innerText = `Tiến độ: ${currentFcIndex + 1} / ${total} từ`;
+
+  if (flashcardMode === "EN-VN") {
+    document.getElementById("fcFrontLabel").innerText = "Tiếng Anh";
+    document.getElementById("fcFrontText").innerText = item.en;
+    
+    document.getElementById("fcBackLabel").innerText = "Nghĩa Tiếng Việt";
+    document.getElementById("fcBackText").innerText = item.vn;
+    document.getElementById("fcAudioText").value = item.en;
+  } else {
+    document.getElementById("fcFrontLabel").innerText = "Tiếng Việt";
+    document.getElementById("fcFrontText").innerText = item.vn;
+    
+    document.getElementById("fcBackLabel").innerText = "Tiếng Anh & IPA";
+    document.getElementById("fcBackText").innerHTML = `${item.en} <br><span class="text-sm font-normal font-mono opacity-90">${item.ipa || ''}</span>`;
+    document.getElementById("fcAudioText").value = item.en;
+  }
+}
+
+function flipFlashcard() {
+  if (allTopicVocab.length === 0) return;
+  const fcInner = document.getElementById("flashcardInner");
+  isFlipped = !isFlipped;
+  if (isFlipped) {
+    fcInner.classList.add("rotate-y-180");
+  } else {
+    fcInner.classList.remove("rotate-y-180");
+  }
+}
+
+function nextFlashcard() {
+  if (allTopicVocab.length === 0) return;
+  currentFcIndex = (currentFcIndex + 1) % allTopicVocab.length;
+  renderFlashcard();
+}
+
+function knowWord() {
+  nextFlashcard();
+}
+
+function dontKnowWord() {
+  nextFlashcard();
+}
+
+/*************************************************************
+ * REFLECTION SPEAKING PRACTICE
+ *************************************************************/
+function prepareSpeakingReflection() {
+  speakingReflectionSentences = [];
+  const questions = topicQuestions[currentTopicId] || [];
+
+  questions.forEach(q => {
+    if (q.trans && q.sample) {
+      speakingReflectionSentences.push({
+        vn: q.trans,
+        en: q.sample.replace(/<[^>]*>?/gm, '')
+      });
+    }
+  });
+
+  currentReflectionIndex = 0;
+  showCurrentReflectionSentence();
+}
+
+function showCurrentReflectionSentence() {
+  const vietSentenceEl = document.getElementById("vietSentence");
+  const engAnswerContainer = document.getElementById("engAnswerContainer");
+  
+  engAnswerContainer.classList.add("hidden");
+
+  if (speakingReflectionSentences.length === 0) {
+    vietSentenceEl.innerText = "Chưa có câu hỏi phản xạ cho chủ đề này.";
+    return;
+  }
+
+  const current = speakingReflectionSentences[currentReflectionIndex];
+  vietSentenceEl.innerText = `"${current.vn}"`;
+}
+
+function showSpeakingAnswer() {
+  if (speakingReflectionSentences.length === 0) return;
+  const engAnswerContainer = document.getElementById("engAnswerContainer");
+  const engAnswerEl = document.getElementById("engAnswer");
+  
+  const current = speakingReflectionSentences[currentReflectionIndex];
+  engAnswerEl.innerText = current.en;
+  engAnswerContainer.classList.remove("hidden");
+}
+
+function nextSpeakingSentence() {
+  if (speakingReflectionSentences.length === 0) return;
+  currentReflectionIndex = (currentReflectionIndex + 1) % speakingReflectionSentences.length;
+  showCurrentReflectionSentence();
+}
+
+/*************************************************************
+ * AUDIO SYNTHESIS
+ *************************************************************/
+function speakText(text) {
+  if (!text) return;
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = 'en-US';
+    utterance.rate = 0.9;
+    window.speechSynthesis.speak(utterance);
+  } else {
+    alert("Trình duyệt của bạn không hỗ trợ phát âm Audio.");
+  }
+}
+</script>
 </body>
 </html>
