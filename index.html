@@ -2290,17 +2290,54 @@ function renderQuestions() {
 }
 
 function toggleQuestionBody(qIdx) {
+  // 1. Lấy tổng số lượng câu hỏi hiện đang hiển thị trong topic
+  const totalQuestions = topicQuestions[currentTopicId] ? topicQuestions[currentTopicId].length : 0;
+
+  // 2. Đóng tất cả các câu hỏi khác và thu gọn lại
+  for (let i = 0; i < totalQuestions; i++) {
+    const otherBody = document.getElementById(`qBody-${i}`);
+    const otherChevron = document.getElementById(`qChevron-${i}`);
+    
+    if (otherBody && i !== qIdx) {
+      otherBody.classList.add("hidden");
+    }
+    if (otherChevron && i !== qIdx) {
+      otherChevron.classList.remove("rotate-180");
+    }
+  }
+
+  // 3. Xử lý Mở / Đóng đúng câu hỏi vừa click
   const qBody = document.getElementById(`qBody-${qIdx}`);
   const qChevron = document.getElementById(`qChevron-${qIdx}`);
-  if (qBody.classList.contains("hidden")) {
-    qBody.classList.remove("hidden");
-    qChevron.classList.add("rotate-180");
-  } else {
-    qBody.classList.add("hidden");
-    qChevron.classList.remove("rotate-180");
+  
+  if (qBody && qChevron) {
+    const isOpening = qBody.classList.contains("hidden");
+
+    if (isOpening) {
+      qBody.classList.remove("hidden");
+      qChevron.classList.add("rotate-180");
+
+      // 4. Đợi giao diện hoàn tất việc co/dãn khung rồi mới cuộn đến đầu câu hỏi
+      setTimeout(() => {
+        const qCard = qBody.parentElement; // Khung chứa thẻ câu hỏi
+        const offsetHeader = 20; // Khoảng cách chừa lề trên cùng (pixel)
+        
+        // Tính vị trí Y chuẩn của đầu câu hỏi trên trang
+        const elementPosition = qCard.getBoundingClientRect().top + window.pageYOffset;
+        const offsetPosition = elementPosition - offsetHeader;
+
+        // Cuộn màn hình đến chính xác đầu câu hỏi
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }, 150);
+    } else {
+      qBody.classList.add("hidden");
+      qChevron.classList.remove("rotate-180");
+    }
   }
 }
-
 /*************************************************************
  * VOCABULARY UTILITIES & TOGGLES
  *************************************************************/
